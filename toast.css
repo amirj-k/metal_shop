@@ -1,0 +1,205 @@
+/* ظرف اصلی پیام‌های Toast را روی صفحه ثابت نگه می‌دارد. */
+.toast-container {
+  position: fixed;
+  top: 2em;
+  right: 2em;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  pointer-events: none;
+}
+
+/* ظاهر پایه هر پیام Toast. */
+.toast {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 1.2em 1.5em;
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.98), rgba(8, 8, 8, 0.98));
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 3px solid;
+  border-radius: 0.8em;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 0.95em;
+  min-width: 320px;
+  max-width: 400px;
+  pointer-events: auto;
+  animation: slideInRight 0.4s ease;
+  overflow: hidden;
+}
+
+/* بخش آیکن پیام را تنظیم می‌کند. */
+.toast-icon {
+  font-size: 1.5em;
+  min-width: 1.5em;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* بخش متن پیام را مرتب می‌کند. */
+.toast-message {
+  flex: 1;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+/* عنوان Toast را مشخص می‌کند. */
+.toast-title {
+  font-weight: 600;
+  margin: 0 0 0.2em;
+  font-size: 1em;
+}
+
+/* متن اصلی Toast را مشخص می‌کند. */
+.toast-text {
+  margin: 0;
+  font-size: 0.9em;
+  opacity: 0.85;
+  white-space: pre-line;
+}
+
+/* رنگ و زمینه پیام موفقیت. */
+.toast.success {
+  border-left-color: #4ade80;
+  background: linear-gradient(135deg, rgba(26, 50, 26, 0.96), rgba(8, 25, 8, 0.98));
+}
+
+/* رنگ آیکن و عنوان پیام موفقیت. */
+.toast.success .toast-icon { color: #4ade80; text-shadow: 0 0 10px rgba(74, 222, 128, 0.5); }
+.toast.success .toast-title { color: #86efac; }
+
+/* رنگ و زمینه پیام خطا. */
+.toast.error {
+  border-left-color: #ef4444;
+  background: linear-gradient(135deg, rgba(50, 26, 26, 0.96), rgba(25, 8, 8, 0.98));
+}
+
+/* رنگ آیکن و عنوان پیام خطا. */
+.toast.error .toast-icon { color: #ef4444; text-shadow: 0 0 10px rgba(239, 68, 68, 0.5); }
+.toast.error .toast-title { color: #fca5a5; }
+
+/* رنگ و زمینه پیام هشدار. */
+.toast.warning {
+  border-left-color: #f59e0b;
+  background: linear-gradient(135deg, rgba(50, 40, 26, 0.96), rgba(25, 20, 8, 0.98));
+}
+
+/* رنگ آیکن و عنوان پیام هشدار. */
+.toast.warning .toast-icon { color: #f59e0b; text-shadow: 0 0 10px rgba(245, 158, 11, 0.5); }
+.toast.warning .toast-title { color: #fcd34d; }
+
+/* رنگ و زمینه پیام اطلاعاتی. */
+.toast.info {
+  border-left-color: #3b82f6;
+  background: linear-gradient(135deg, rgba(26, 35, 50, 0.96), rgba(8, 15, 25, 0.98));
+}
+
+/* رنگ آیکن و عنوان پیام اطلاعاتی. */
+.toast.info .toast-icon { color: #3b82f6; text-shadow: 0 0 10px rgba(59, 130, 246, 0.5); }
+.toast.info .toast-title { color: #93c5fd; }
+
+/* ظاهر پیام در حال بارگذاری. */
+.toast.loading { border-left-color: #ffd700; }
+.toast.loading .toast-icon { color: #ffd700; animation: spin 1s linear infinite; }
+.toast.loading .toast-title { color: #ffed4e; }
+
+/* نوار زمانی پایین Toast را ایجاد می‌کند. */
+.toast::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  animation: progressBar 3s linear forwards;
+}
+
+/* رنگ نوار زمانی برای انواع مختلف پیام. */
+.toast.success::after { background: linear-gradient(90deg, #4ade80, #4ade80 50%, transparent); }
+.toast.error::after { background: linear-gradient(90deg, #ef4444, #ef4444 50%, transparent); }
+.toast.warning::after { background: linear-gradient(90deg, #f59e0b, #f59e0b 50%, transparent); }
+.toast.info::after { background: linear-gradient(90deg, #3b82f6, #3b82f6 50%, transparent); }
+
+/* دکمه بستن پیام را طراحی می‌کند. */
+.toast-close {
+  width: 1.5em;
+  height: 1.5em;
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.3em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: color 0.2s ease;
+}
+
+/* رنگ دکمه بستن در حالت Hover. */
+.toast-close:hover { color: #fff; }
+
+/* انیمیشن ورود Toast از سمت راست. */
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(100px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* انیمیشن خروج Toast به سمت راست. */
+@keyframes slideOutRight {
+  from { opacity: 1; transform: translateX(0); }
+  to { opacity: 0; transform: translateX(100px); }
+}
+
+/* انیمیشن کم شدن نوار زمان پیام. */
+@keyframes progressBar {
+  from { width: 100%; }
+  to { width: 0%; }
+}
+
+/* انیمیشن چرخش آیکن Loading. */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* تنظیمات Toast برای تبلت و موبایل. */
+@media (max-width: 768px) {
+  .toast-container {
+    top: 1em;
+    right: 1em;
+    left: 1em;
+  }
+
+  .toast {
+    min-width: auto;
+    max-width: 100%;
+  }
+}
+
+/* تنظیمات فشرده‌تر برای صفحه‌های خیلی کوچک. */
+@media (max-width: 480px) {
+  .toast-container {
+    top: 0.5em;
+    right: 0.5em;
+    left: 0.5em;
+  }
+
+  .toast {
+    padding: 1em 1.2em;
+    font-size: 0.9em;
+  }
+
+  .toast-icon {
+    font-size: 1.3em;
+    min-width: 1.3em;
+  }
+
+  .toast-title { font-size: 0.95em; }
+  .toast-text { font-size: 0.85em; }
+}

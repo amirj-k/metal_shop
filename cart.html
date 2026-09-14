@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Shopping Cart | NICHERZ</title>
+
+  <link rel="stylesheet" href="style-shop.css">
+
+  <link rel="stylesheet" href="cart.css">
+
+  <link rel="stylesheet" href="toast.css">
+
+  <link rel="stylesheet" href="auth.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/jpeg" href="./Images/logo.webp">
+
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+         SMOKE BACKGROUND
+    ========================== -->
+
+  <div class="smoke-background" aria-hidden="true">
+
+    <div class="smoke smoke-one"></div>
+
+    <div class="smoke smoke-two"></div>
+
+    <div class="smoke smoke-three"></div>
+
+  </div>
+
+
+
+  <!-- =========================
+         GLOBAL SCRIPTS
+    ========================== -->
+
+  <script src="toast.js"></script>
+
+
+
+  <!-- =========================
+         HEADER
+    ========================== -->
+
+  <header class="shop-header">
+
+    <div class="shop-header-inner">
+
+
+      <a href="/shop" class="brand-wrap" aria-label="NICHERZ Shop">
+
+        <div class="brand-mark">
+
+          <img src="./Images/logo.webp" alt="NICHERZ logo" style="
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            border-radius: 2px;
+                        ">
+
+        </div>
+
+
+        <div class="brand-copy">
+
+          <span class="brand-name">
+            NICHERZ
+          </span>
+
+          <small>
+            ARCHIVE
+          </small>
+
+        </div>
+
+      </a>
+
+
+
+      <nav class="header-nav" aria-label="Main navigation">
+
+        <a href="/">
+          HOME
+        </a>
+
+        <a href="/shop">
+          SHOP
+        </a>
+
+        <a href="/#gallery">
+          BANDS
+        </a>
+
+        <a href="#" class="disabled">
+          APPAREL
+        </a>
+
+        <a href="/contact">
+          CONTACT
+        </a>
+
+
+        <div id="auth-nav" class="auth-nav"></div>
+
+      </nav>
+
+
+
+      <div class="header-actions">
+
+        <a href="/cart" class="cart-pill" aria-current="page">
+          CART
+          <span id="cartHeaderCount">
+            (0)
+          </span>
+        </a>
+
+      </div>
+
+
+    </div>
+
+  </header>
+
+
+
+  <!-- =========================
+         MAIN CART PAGE
+    ========================== -->
+
+  <main class="cart-page">
+
+
+    <!-- CART HEADER -->
+
+    <div class="cart-header">
+
+      <h1 class="cart-title">
+        YOUR CART
+      </h1>
+
+      <p class="cart-subtitle">
+        Review your items before checkout
+      </p>
+
+    </div>
+
+
+
+    <!-- CART CONTENT -->
+
+    <div class="cart-container">
+
+
+      <!-- =========================
+                 CART ITEMS
+            ========================== -->
+
+      <section class="cart-items-section" aria-label="Cart items">
+
+        <div id="cartItemsContainer" class="cart-items"></div>
+
+
+        <div id="emptyCartMessage" class="empty-cart" hidden>
+
+          <p class="empty-icon" aria-hidden="true">
+            🛒
+          </p>
+
+          <h2>
+            Your Cart is Empty
+          </h2>
+
+          <p>
+            Time to discover some legendary gear!
+          </p>
+
+          <a href="/shop" class="continue-shopping-btn">
+            ← CONTINUE SHOPPING
+          </a>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- =========================
+                 ORDER SUMMARY
+            ========================== -->
+
+      <section class="cart-summary-section" aria-label="Order summary">
+
+        <div class="cart-summary">
+
+
+          <h2 class="summary-title">
+            ORDER SUMMARY
+          </h2>
+
+
+
+          <!-- SUBTOTAL -->
+
+          <div class="summary-row">
+
+            <span class="summary-label">
+              Subtotal
+            </span>
+
+            <span class="summary-value" id="subtotalAmount">
+              ۰ تومان
+            </span>
+
+          </div>
+
+
+
+          <!-- SHIPPING -->
+
+          <div class="summary-row">
+
+            <span class="summary-label">
+              Shipping
+            </span>
+
+            <span class="summary-value" id="shippingAmount">
+              FREE
+            </span>
+
+          </div>
+
+
+
+          <!-- TAX -->
+
+          <div class="summary-row">
+
+            <span class="summary-label">
+              Tax
+            </span>
+
+            <span class="summary-value" id="taxAmount">
+              ۰ تومان
+            </span>
+
+          </div>
+
+
+
+          <!-- =========================
+                         PROMO CODE
+                    ========================== -->
+
+          <div class="promo-section">
+
+            <input type="text" id="promoInput" class="promo-input" placeholder="Enter promo code"
+              aria-label="Promo code" autocomplete="off">
+
+
+            <button type="button" id="promoBtn" class="promo-btn">
+              APPLY
+            </button>
+
+          </div>
+
+
+
+          <!-- =========================
+                         DISCOUNT
+                    ========================== -->
+
+          <div class="summary-row" id="discountRow" hidden>
+
+            <span class="summary-label">
+              Discount
+            </span>
+
+            <span class="summary-value" id="discountAmount">
+              ۰ تومان
+            </span>
+
+          </div>
+
+
+
+          <!-- DIVIDER -->
+
+          <div class="summary-divider"></div>
+
+
+
+          <!-- TOTAL -->
+
+          <div class="summary-row summary-total">
+
+            <span class="summary-label">
+              TOTAL
+            </span>
+
+            <span class="summary-value" id="totalAmount">
+              ۰ تومان
+            </span>
+
+          </div>
+
+
+
+          <!-- CHECKOUT -->
+
+          <button class="checkout-btn" id="checkoutBtn" type="button">
+            PROCEED TO CHECKOUT
+          </button>
+
+
+
+          <!-- CONTINUE SHOPPING -->
+
+          <a href="/shop" class="continue-shopping-link">
+            ← Continue Shopping
+          </a>
+
+
+        </div>
+
+      </section>
+
+
+    </div>
+
+  </main>
+
+
+
+  <!-- =========================
+         FOOTER
+    ========================== -->
+
+  <footer class="shop-footer">
+
+    <div class="footer-grid">
+
+
+      <!-- BRAND -->
+
+      <div class="footer-brand">
+
+        <span class="footer-logo">
+          N
+        </span>
+
+        <div>
+
+          <h3>
+            NICHERZ
+          </h3>
+
+          <p>
+            Curated chaos for the loudest souls.
+          </p>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- SHOP -->
+
+      <div class="footer-links">
+
+        <h4>
+          SHOP
+        </h4>
+
+        <a href="/shop?category=band-merch">
+          Band Merch
+        </a>
+
+        <a href="/shop?category=streetwear">
+          Streetwear
+        </a>
+
+        <a href="/shop?category=accessories">
+          Accessories
+        </a>
+
+      </div>
+
+
+
+      <!-- INFO -->
+
+      <div class="footer-links">
+
+        <h4>
+          INFO
+        </h4>
+
+        <a href="/contact">
+          About
+        </a>
+
+        <a href="#">
+          Shipping
+        </a>
+
+        <a href="#">
+          Support
+        </a>
+
+      </div>
+
+
+
+      <!-- SOCIAL -->
+
+      <div class="footer-links">
+
+        <h4>
+          FOLLOW
+        </h4>
+
+        <a href="https://instagram.com/nicherzz" target="_blank" rel="noopener noreferrer">
+          Instagram
+        </a>
+
+        <a href="https://t.me/nicherz" target="_blank" rel="noopener noreferrer">
+          Telegram
+        </a>
+
+      </div>
+
+
+    </div>
+
+
+
+    <div class="footer-bottom">
+
+      <span>
+        © 2026 NICHERZ
+      </span>
+
+      <span>
+        WEAR THE LEGEND
+      </span>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- =========================
+         PAGE SCRIPTS
+    ========================== -->
+
+  <script type="module" src="cart.js"></script>
+
+  <script type="module" src="header-auth.js"></script>
+
+
+</body>
+
+</html>

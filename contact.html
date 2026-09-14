@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — NICHERZ</title>
+  <link rel="stylesheet" href="style-shop.css" />
+  <link rel="stylesheet" href="toast.css" />
+  <link rel="stylesheet" href="auth.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/jpeg" href="./Images/logo.webp" />
+  <style>
+    /* چیدمان صفحه تماس را تنظیم می‌کند. */
+    .contact-page {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+    }
+
+
+    /* بخش معرفی تماس را تنظیم می‌کند. */
+    .contact-hero {
+      min-height: 42vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 8em 1.5em 2em;
+    }
+
+    /* عنوان تماس را تنظیم می‌کند. */
+    .contact-title {
+      margin: 0;
+      font-family: "Metal Mania", cursive;
+      font-size: clamp(3.5rem, 9vw, 7rem);
+      letter-spacing: .1em;
+      color: #fff;
+      text-shadow: 0 0 25px rgba(255, 255, 255, .12);
+    }
+
+    /* زیرعنوان تماس را تنظیم می‌کند. */
+    .contact-subtitle {
+      margin: 1em 0 0;
+      color: rgba(255, 255, 255, .62);
+      font-family: "Metal Mania", cursive;
+      font-size: clamp(.85rem, 2vw, 1.2rem);
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+
+    /* فاصله بخش کارت‌ها را تنظیم می‌کند. */
+    .contact-section {
+      padding: 1em 1.5em 6em;
+    }
+
+    /* شبکه کارت‌های تماس را تنظیم می‌کند. */
+    .contact-container {
+      width: min(90%, 68em);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5em;
+    }
+
+    /* کارت تماس را تنظیم می‌کند. */
+    .contact-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 230px;
+      padding: 2em 1.5em;
+      text-align: center;
+      text-decoration: none;
+      color: #fff;
+      background: linear-gradient(180deg, rgba(26, 26, 26, .96), rgba(8, 8, 8, .98));
+      border: 1px solid rgba(255, 255, 255, .14);
+      border-radius: 1.2em;
+      box-shadow: 0 18px 35px rgba(0, 0, 0, .55), inset 0 1px 0 rgba(255, 255, 255, .08);
+      overflow: hidden;
+      transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease, background .25s ease;
+    }
+
+    /* نور داخلی کارت را می‌سازد. */
+    .contact-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255, 255, 255, .16), transparent 40%, rgba(255, 255, 255, .03));
+      opacity: 0;
+      transition: opacity .3s ease;
+      pointer-events: none;
+    }
+
+    /* حالت هاور کارت را تنظیم می‌کند. */
+    .contact-card:hover {
+      transform: translateY(-10px) scale(1.02);
+      border-color: rgba(255, 255, 255, .65);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, .7), 0 0 28px rgba(255, 255, 255, .12);
+    }
+
+    /* نور کارت را هنگام هاور نشان می‌دهد. */
+    .contact-card:hover::before {
+      opacity: 1;
+    }
+
+    /* آیکن تماس را تنظیم می‌کند. */
+    .contact-icon {
+      width: 4em;
+      height: 4em;
+      display: grid;
+      place-items: center;
+      margin-bottom: 1.2em;
+      border: 1px solid rgba(255, 255, 255, .25);
+      background: rgba(255, 255, 255, .04);
+      border-radius: 50%;
+      font-size: 1.25em;
+      font-weight: 700;
+      transition: transform .25s ease, background .25s ease;
+      overflow: hidden;
+    }
+
+    /* آیکن را هنگام هاور متحرک می‌کند. */
+    .contact-card:hover .contact-icon {
+      transform: scale(1.1) rotate(-4deg);
+      background: rgba(255, 255, 255, .1);
+    }
+
+    /* برچسب تماس را تنظیم می‌کند. */
+    .contact-label {
+      margin: 0 0 .45em;
+      color: rgba(255, 255, 255, .55);
+      font-family: "Metal Mania", cursive;
+      font-size: .7em;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+
+    /* مقدار تماس را تنظیم می‌کند. */
+    .contact-value {
+      margin: 0;
+      color: #fff;
+      font-family: "Metal Mania", cursive;
+      font-size: clamp(1.25em, 2vw, 1.7em);
+      letter-spacing: .08em;
+    }
+
+    /* توضیح کوتاه تماس را تنظیم می‌کند. */
+    .contact-note {
+      margin: .8em 0 0;
+      color: rgba(255, 255, 255, .45);
+      font-family: "Metal Mania", cursive;
+      font-size: .72em;
+      letter-spacing: .08em;
+    }
+
+    .brand_wrap,
+    samll,
+    .brand_name {
+      text-decoration: none;
+    }
+
+
+    /* فوتر صفحه تماس را با فوتر فروشگاه هماهنگ می‌کند. */
+    @media (max-width:700px) {
+      .contact-container {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 1em;
+      }
+
+      .contact-hero {
+        min-height: 38vh;
+        padding-top: 7em;
+      }
+
+      .contact-card {
+        min-height: 190px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="smoke-background" aria-hidden="true">
+    <div class="smoke smoke-one"></div>
+    <div class="smoke smoke-two"></div>
+    <div class="smoke smoke-three"></div>
+  </div>
+
+  <div class="contact-page">
+    <header class="shop-header">
+      <div class="shop-header-inner">
+        <a href="/" class="brand-wrap" aria-label="NICHERZ home">
+          <div class="brand-mark"><img src="./Images/logo.webp" alt="NICHERZ logo" class="footer-logo" /></div>
+          <div class="brand-copy"><span class="brand-name">NICHERZ</span><small>ARCHIVE</small></div>
+        </a>
+        <nav class="header-nav" aria-label="Main navigation">
+          <a href="/">HOME</a><a href="/shop">SHOP</a><a href="/#gallery">BANDS</a><a
+            href="#" class="disabled">APPAREL</a><a href="/contact" class="active-nav"
+            aria-current="page">CONTACT</a>
+          <div id="auth-nav" class="auth-nav"></div>
+        </nav>
+        <div class="header-actions"><a href="/cart" class="cart-pill">CART <span id="cartHeaderCount">(0)</span></a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="contact-hero">
+        <h1 class="contact-title">CONTACT</h1>
+        <p class="contact-subtitle">GET IN TOUCH WITH NICHERZ</p>
+      </section>
+      <section class="contact-section" id="contact">
+        <div class="contact-container">
+          <a class="contact-card" href="https://instagram.com/nicherzz" target="_blank" rel="noopener noreferrer">
+            <div class="contact-icon"><img src="Images/insta.webp" alt="Instagram"
+                style="height:100%;width:100%;object-fit:cover;" /></div>
+            <p class="contact-label">Instagram</p>
+            <h2 class="contact-value">@nicherzz</h2>
+            <p class="contact-note">FOLLOW / DM</p>
+          </a>
+          <a class="contact-card" href="https://t.me/nicherz" target="_blank" rel="noopener noreferrer">
+            <div class="contact-icon" aria-hidden="true">➤</div>
+            <p class="contact-label">Telegram</p>
+            <h2 class="contact-value">nicherz</h2>
+            <p class="contact-note">CHANNEL</p>
+          </a>
+          <a class="contact-card" href="tel:09122159432">
+            <div class="contact-icon" aria-hidden="true">☎</div>
+            <p class="contact-label">Phone</p>
+            <h2 class="contact-value">09122159432</h2>
+            <p class="contact-note">CALL NOW</p>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="shop-footer">
+      <div class="footer-grid">
+        <div class="footer-brand"><span class="footer-logo">N</span>
+          <div>
+            <h3>NICHERZ</h3>
+            <p>Curated chaos for the loudest souls.</p>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>SHOP</h4><a href="/shop?category=band-merch">Band Merch</a><a
+            href="/shop?category=streetwear">Streetwear</a><a
+            href="/shop?category=accessories">Accessories</a>
+        </div>
+        <div class="footer-links">
+          <h4>INFO</h4><a href="/contact">Contact</a><a href="#">Shipping</a><a href="#">Support</a>
+        </div>
+        <div class="footer-links">
+          <h4>FOLLOW</h4><a href="https://instagram.com/nicherzz" target="_blank"
+            rel="noopener noreferrer">Instagram</a><a href="https://t.me/nicherz" target="_blank"
+            rel="noopener noreferrer">Telegram</a>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 NICHERZ</span><span>WEAR THE LEGEND</span></div>
+    </footer>
+  </div>
+
+  <script type="module" src="header-auth.js"></script>
+</body>
+
+</html>

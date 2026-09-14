@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Product | NICHERZ</title>
+
+  <link rel="stylesheet" href="style-shop.css">
+
+  <link rel="stylesheet" href="product-detail.css">
+
+  <link rel="stylesheet" href="toast.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/jpeg" href="./Images/logo.webp">
+
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+         SMOKE BACKGROUND
+    ========================== -->
+
+  <div class="smoke-background" aria-hidden="true">
+
+    <div class="smoke smoke-one"></div>
+
+    <div class="smoke smoke-two"></div>
+
+    <div class="smoke smoke-three"></div>
+
+  </div>
+
+
+
+  <!-- =========================
+         HEADER
+    ========================== -->
+
+  <header class="shop-header">
+
+    <div class="shop-header-inner">
+
+
+      <div class="brand-wrap" aria-label="Brand logo">
+
+        <div class="brand-mark">
+
+          <img src="./Images/logo.webp" alt="NICHERZ logo" style="
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            border-radius: 2px;
+                        ">
+
+        </div>
+
+
+        <div class="brand-copy">
+
+          <span class="brand-name">
+            NICHERZ
+          </span>
+
+          <small>
+            ARCHIVE
+          </small>
+
+        </div>
+
+      </div>
+
+
+
+      <nav class="header-nav" aria-label="Main navigation">
+
+        <a href="/">
+          HOME
+        </a>
+
+        <a href="/shop" class="active-nav">
+          SHOP
+        </a>
+
+        <a href="/#gallery">
+          BANDS
+        </a>
+
+        <a href="#" class="disabled">
+          APPAREL
+        </a>
+
+        <a href="/contact">
+          CONTACT
+        </a>
+
+
+        <div id="auth-nav" class="auth-nav"></div>
+
+      </nav>
+
+
+
+      <div class="header-actions">
+
+        <a href="/cart" class="cart-pill" aria-label="Shopping cart">
+          CART
+          <span id="cartHeaderCount">
+            (0)
+          </span>
+        </a>
+
+      </div>
+
+
+    </div>
+
+  </header>
+
+
+
+  <!-- =========================
+         MAIN
+    ========================== -->
+
+  <main class="product-detail-page">
+
+
+    <!-- BACK TO SHOP -->
+
+    <div class="back-button-wrapper">
+
+      <a href="/shop" class="back-button">
+        ← BACK TO SHOP
+      </a>
+
+    </div>
+
+
+
+    <!-- =========================
+             PRODUCT DETAIL
+        ========================== -->
+
+    <section class="product-detail-container">
+
+
+      <!-- PRODUCT IMAGE -->
+
+      <div class="product-detail-image">
+
+        <img id="productImage" src="" alt="Product" class="detail-image">
+
+      </div>
+
+
+
+      <!-- PRODUCT INFORMATION -->
+
+      <div class="product-detail-info">
+
+
+        <!-- HEADER -->
+
+        <div class="detail-header">
+
+          <h1 id="productName" class="detail-name"></h1>
+
+          <p id="productBand" class="detail-band"></p>
+
+        </div>
+
+
+
+        <!-- RATING -->
+
+        <!--<div class="detail-rating">-->
+
+        <!--  <span class="stars">-->
+        <!--    ★★★★★-->
+        <!--  </span>-->
+
+        <!--  <span class="review-count">-->
+        <!--    (12 reviews)-->
+        <!--  </span>-->
+
+        <!--</div>-->
+
+
+
+        <!-- DESCRIPTION -->
+
+        <p id="productDescription" class="detail-description"></p>
+
+
+
+        <!-- SPECS -->
+
+        <div class="detail-specs">
+
+
+          <div class="spec-item">
+
+            <span class="spec-label">
+              Type:
+            </span>
+
+            <span id="productType" class="spec-value"></span>
+
+          </div>
+
+
+
+          <div class="spec-item">
+
+            <span class="spec-label">
+              Price:
+            </span>
+
+            <span id="productPrice" class="spec-value price-highlight"></span>
+
+          </div>
+
+
+
+          <div class="spec-item">
+
+            <span class="spec-label">
+              Stock:
+            </span>
+
+            <span id="productStock" class="spec-value"></span>
+
+          </div>
+
+
+        </div>
+
+
+
+        <!-- SELECT SIZE -->
+
+        <div class="size-section">
+
+          <span class="section-label">
+            SELECT SIZE
+          </span>
+
+          <div class="size-options" id="sizeOptions"></div>
+
+        </div>
+
+
+
+        <!-- QUANTITY -->
+
+        <div class="quantity-section">
+
+          <span class="section-label">
+            QUANTITY
+          </span>
+
+
+          <div class="quantity-selector">
+
+
+            <button class="qty-btn" id="qtyDecrease" type="button" aria-label="Decrease quantity">
+              −
+            </button>
+
+
+            <input type="number" id="qtyInput" class="qty-input" value="1" min="1" inputmode="numeric"
+              aria-label="Quantity">
+
+
+            <button class="qty-btn" id="qtyIncrease" type="button" aria-label="Increase quantity">
+              +
+            </button>
+
+
+          </div>
+
+        </div>
+
+
+
+        <!-- ADD TO CART -->
+
+        <button id="addToCartBtn" class="add-to-cart-btn" type="button">
+          ADD TO CART
+        </button>
+
+
+
+        <!-- ADDITIONAL INFO -->
+
+      <!--  <div class="additional-info">-->
+
+
+      <!--    <div class="info-item">-->
+
+      <!--      <span class="info-icon">-->
+      <!--        🚚-->
+      <!--      </span>-->
+
+      <!--      <p>-->
+      <!--        FREE SHIPPING ON ORDERS OVER $50-->
+      <!--      </p>-->
+
+      <!--    </div>-->
+
+
+
+      <!--    <div class="info-item">-->
+
+      <!--      <span class="info-icon">-->
+      <!--        ↩️-->
+      <!--      </span>-->
+
+      <!--      <p>-->
+      <!--        30-DAY RETURNS &amp; EXCHANGES-->
+      <!--      </p>-->
+
+      <!--    </div>-->
+
+
+
+      <!--    <div class="info-item">-->
+
+      <!--      <span class="info-icon">-->
+      <!--        🔒-->
+      <!--      </span>-->
+
+      <!--      <p>-->
+      <!--        SECURE CHECKOUT WITH SSL-->
+      <!--      </p>-->
+
+      <!--    </div>-->
+
+
+      <!--  </div>-->
+
+
+      <!--</div>-->
+
+    </section>
+
+
+
+    <!-- =========================
+             RELATED PRODUCTS
+        ========================== -->
+
+    <section class="related-products">
+
+      <h2 class="section-title">
+        RELATED PRODUCTS
+      </h2>
+
+      <div class="related-grid" id="relatedProductsGrid"></div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- =========================
+         FOOTER
+    ========================== -->
+
+  <footer class="shop-footer">
+
+
+    <div class="footer-grid">
+
+
+      <!-- BRAND -->
+
+      <div class="footer-brand">
+
+        <span class="footer-logo">
+          N
+        </span>
+
+        <div>
+
+          <h3>
+            NICHERZ
+          </h3>
+
+          <p>
+            Curated chaos for the loudest souls.
+          </p>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- SHOP -->
+
+      <div class="footer-links">
+
+        <h4>
+          SHOP
+        </h4>
+
+        <a href="/shop?category=band-merch">
+          Band Merch
+        </a>
+
+        <a href="/shop?category=streetwear">
+          Streetwear
+        </a>
+
+        <a href="/shop?category=accessories">
+          Accessories
+        </a>
+
+      </div>
+
+
+
+      <!-- INFO -->
+
+      <div class="footer-links">
+
+        <h4>
+          INFO
+        </h4>
+
+        <a href="/contact">
+          About
+        </a>
+
+        <a href="#">
+          Shipping
+        </a>
+
+        <a href="#">
+          Support
+        </a>
+
+      </div>
+
+
+
+      <!-- SOCIAL -->
+
+      <div class="footer-links">
+
+        <h4>
+          FOLLOW
+        </h4>
+
+        <a href="https://instagram.com/nicherzz" target="_blank" rel="noopener noreferrer">
+          Instagram
+        </a>
+
+        <a href="https://t.me/nicherz" target="_blank" rel="noopener noreferrer">
+          Telegram
+        </a>
+
+      </div>
+
+
+    </div>
+
+
+
+    <div class="footer-bottom">
+
+      <span>
+        © 2026 NICHERZ
+      </span>
+
+      <span>
+        WEAR THE LEGEND
+      </span>
+
+    </div>
+
+
+  </footer>
+
+
+
+  <!-- =========================
+         SCRIPTS
+    ========================== -->
+
+  <script src="products.js"></script>
+
+  <script src="toast.js"></script>
+
+  <script type="module" src="header-auth.js"></script>
+
+  <script type="module" src="product-detail.js"></script>
+
+
+</body>
+
+</html>

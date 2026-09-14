@@ -1,0 +1,2216 @@
+/* =========================================================
+   ADMIN PAGE
+   ========================================================= */
+
+.admin-page {
+    position: relative;
+    z-index: 1;
+
+    width: min(90%, 80em);
+
+    margin: 0 auto;
+
+    padding: 3em 0 5em;
+
+    min-height: 100vh;
+}
+
+.header-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.admin-hero {
+    text-align: center;
+
+    padding: 2em 0 3em;
+}
+
+.admin-title {
+    margin: 0 !important;
+    padding: 0 !important;
+
+    color: #fff !important;
+
+    font-size:
+        clamp(3.2em, 6vw, 6em);
+
+    font-weight: normal;
+
+    letter-spacing:
+        0.08em;
+
+    text-shadow:
+        0 0 20px
+        rgba(255, 255, 255, 0.12);
+}
+
+.admin-subtitle {
+    margin:
+        0.9em 0 0;
+
+    color:
+        rgba(255, 255, 255, 0.52);
+
+    font-size:
+        0.95em;
+
+    letter-spacing:
+        0.2em;
+}
+
+
+/* =========================================================
+   HEADER BUTTON
+   ========================================================= */
+
+.admin-header-button {
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.22);
+
+    background:
+        rgba(255, 255, 255, 0.03);
+
+    color:
+        rgba(255, 255, 255, 0.72);
+
+    padding:
+        0.7em 1em;
+
+    font-family:
+        "Metal Mania",
+        cursive;
+
+    font-size:
+        0.62em;
+
+    letter-spacing:
+        0.13em;
+
+    cursor:
+        pointer;
+
+    transition:
+        all 0.2s ease;
+}
+
+.admin-header-button:hover {
+    background:
+        #fff;
+
+    color:
+        #000;
+
+    border-color:
+        #fff;
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 0 18px
+        rgba(255, 255, 255, 0.14);
+}
+
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.admin-loading {
+    min-height: 18em;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        1em;
+}
+
+.admin-loader {
+    width: 42px;
+    height: 42px;
+
+    border:
+        2px solid
+        rgba(255, 255, 255, 0.12);
+
+    border-top-color:
+        rgba(255, 255, 255, 0.85);
+
+    border-radius:
+        50%;
+
+    animation:
+        adminSpin
+        0.8s
+        linear
+        infinite;
+}
+
+@keyframes adminSpin {
+
+    to {
+        transform:
+            rotate(360deg);
+    }
+
+}
+
+.admin-loading p {
+    margin: 0;
+
+    color:
+        rgba(255, 255, 255, 0.4);
+
+    font-size:
+        0.8em;
+
+    letter-spacing:
+        0.16em;
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.admin-content {
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        1.4em;
+}
+
+
+/* =========================================================
+   STATS
+   ========================================================= */
+
+.admin-stats {
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap:
+        1em;
+}
+
+.admin-stat-card {
+    position:
+        relative;
+
+    min-height:
+        8em;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        center;
+
+    padding:
+        1.4em;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(26, 26, 26, 0.96),
+            rgba(8, 8, 8, 0.98)
+        );
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.14);
+
+    border-radius:
+        1em;
+
+    box-shadow:
+        0 15px 30px
+        rgba(0, 0, 0, 0.45),
+
+        inset 0 1px 0
+        rgba(255, 255, 255, 0.07);
+
+    overflow:
+        hidden;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.admin-stat-card:hover {
+    transform:
+        translateY(-5px);
+
+    border-color:
+        rgba(255, 255, 255, 0.35);
+
+    box-shadow:
+        0 18px 35px
+        rgba(0, 0, 0, 0.55),
+
+        0 0 20px
+        rgba(255, 255, 255, 0.06);
+}
+
+.admin-stat-label {
+    color:
+        rgba(255, 255, 255, 0.37);
+
+    font-size:
+        0.58em;
+
+    letter-spacing:
+        0.15em;
+}
+
+.admin-stat-value {
+    margin-top:
+        0.35em;
+
+    color:
+        #fff;
+
+    font-size:
+        2em;
+
+    font-weight:
+        normal;
+
+    letter-spacing:
+        0.05em;
+}
+
+
+/* =========================================================
+   MAIN CARD
+   ========================================================= */
+
+.admin-card {
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(26, 26, 26, 0.96),
+            rgba(8, 8, 8, 0.98)
+        );
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.14);
+
+    border-radius:
+        1.2em;
+
+    box-shadow:
+        0 18px 35px
+        rgba(0, 0, 0, 0.55),
+
+        inset 0 1px 0
+        rgba(255, 255, 255, 0.08);
+}
+
+.admin-card::before {
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.09),
+            transparent 35%,
+            rgba(255, 255, 255, 0.02)
+        );
+
+    pointer-events:
+        none;
+}
+
+
+/* =========================================================
+   CARD HEADER
+   ========================================================= */
+
+.admin-card-header {
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        1em;
+
+    padding:
+        1.4em 1.5em;
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+}
+
+.admin-section-number {
+    width:
+        2.2em;
+
+    height:
+        2.2em;
+
+    flex-shrink:
+        0;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.28);
+
+    color:
+        rgba(255, 255, 255, 0.75);
+
+    font-size:
+        0.95em;
+}
+
+.admin-card-header h2 {
+    margin:
+        0;
+
+    color:
+        #fff;
+
+    font-size:
+        1.15em;
+
+    font-weight:
+        normal;
+
+    letter-spacing:
+        0.12em;
+}
+
+.admin-card-header p {
+    margin:
+        0.35em 0 0;
+
+    color:
+        rgba(255, 255, 255, 0.32);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size:
+        0.57em;
+
+    letter-spacing:
+        0.18em;
+}
+
+.refresh-button {
+    margin-left:
+        auto;
+
+    min-height:
+        2.6em;
+
+    padding:
+        0 1em;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.18);
+
+    border-radius:
+        0.45em;
+
+    background:
+        rgba(255, 255, 255, 0.025);
+
+    color:
+        rgba(255, 255, 255, 0.62);
+
+    font-family:
+        "Metal Mania",
+        cursive;
+
+    font-size:
+        0.58em;
+
+    letter-spacing:
+        0.1em;
+
+    cursor:
+        pointer;
+
+    transition:
+        all 0.2s ease;
+}
+
+.refresh-button:hover {
+    color:
+        #000;
+
+    background:
+        #fff;
+
+    border-color:
+        #fff;
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================================
+   TOOLBAR
+   ========================================================= */
+
+.admin-toolbar {
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        flex-end;
+
+    gap:
+        1em;
+
+    padding:
+        1em 1.5em;
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.06);
+}
+
+.admin-filter {
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        0.45em;
+}
+
+.admin-filter label {
+    color:
+        rgba(255, 255, 255, 0.34);
+
+    font-size:
+        0.57em;
+
+    letter-spacing:
+        0.14em;
+}
+
+.admin-filter select,
+.status-control select {
+    min-height:
+        2.8em;
+
+    padding:
+        0 0.9em;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.17);
+
+    border-radius:
+        0.45em;
+
+    outline:
+        none;
+
+    background:
+        #111;
+
+    color:
+        #fff;
+
+    font-family:
+        "Metal Mania",
+        cursive;
+
+    font-size:
+        0.62em;
+
+    letter-spacing:
+        0.06em;
+
+    cursor:
+        pointer;
+}
+
+.admin-filter select:focus,
+.status-control select:focus {
+    border-color:
+        rgba(255, 255, 255, 0.5);
+
+    box-shadow:
+        0 0 16px
+        rgba(255, 255, 255, 0.05);
+}
+
+.admin-order-count {
+    color:
+        rgba(255, 255, 255, 0.32);
+
+    font-size:
+        0.58em;
+
+    letter-spacing:
+        0.1em;
+}
+
+.admin-order-count span {
+    color:
+        #fff;
+
+    font-size:
+        1.3em;
+}
+
+
+/* =========================================================
+   ORDERS LIST
+   ========================================================= */
+
+.admin-orders-list {
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    padding:
+        0 1.5em 1em;
+}
+
+.admin-order-item {
+    display:
+        grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        auto;
+
+    gap:
+        1em;
+
+    align-items:
+        center;
+
+    padding:
+        1.25em 0;
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.07);
+}
+
+.admin-order-item:last-child {
+    border-bottom:
+        0;
+}
+
+.admin-order-main {
+    min-width:
+        0;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        0.35em;
+}
+
+.admin-order-id {
+    color:
+        #fff;
+
+    font-size:
+        0.86em;
+
+    letter-spacing:
+        0.08em;
+}
+
+.admin-customer {
+    color:
+        rgba(255, 255, 255, 0.52);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size:
+        0.64em;
+}
+
+.admin-order-date {
+    color:
+        rgba(255, 255, 255, 0.28);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size:
+        0.57em;
+}
+
+.admin-order-right {
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        1em;
+}
+
+.admin-order-total {
+    color:
+        rgba(255, 255, 255, 0.8);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size:
+        0.68em;
+
+    direction:
+        rtl;
+
+    white-space:
+        nowrap;
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.admin-status {
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    min-width:
+        7em;
+
+    min-height:
+        2.2em;
+
+    padding:
+        0.3em 0.8em;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.2);
+
+    border-radius:
+        999px;
+
+    color:
+        rgba(255, 255, 255, 0.68);
+
+    font-size:
+        0.52em;
+
+    letter-spacing:
+        0.07em;
+
+    white-space:
+        nowrap;
+}
+
+.admin-status.pending {
+    border-color:
+        rgba(255, 255, 255, 0.22);
+}
+
+.admin-status.confirmed {
+    border-color:
+        rgba(255, 255, 255, 0.4);
+}
+
+.admin-status.processing {
+    border-color:
+        rgba(255, 255, 255, 0.48);
+
+    box-shadow:
+        0 0 13px
+        rgba(255, 255, 255, 0.05);
+}
+
+.admin-status.shipped {
+    border-color:
+        rgba(255, 255, 255, 0.55);
+}
+
+.admin-status.delivered {
+    border-color:
+        rgba(255, 255, 255, 0.65);
+
+    background:
+        rgba(255, 255, 255, 0.07);
+
+    color:
+        #fff;
+}
+
+.admin-status.cancelled {
+    color:
+        rgba(255, 255, 255, 0.35);
+
+    border-color:
+        rgba(255, 255, 255, 0.1);
+}
+
+
+/* =========================================================
+   VIEW
+   ========================================================= */
+
+.admin-view-button {
+    min-height:
+        2.5em;
+
+    padding:
+        0 0.95em;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.2);
+
+    border-radius:
+        0.45em;
+
+    background:
+        rgba(255, 255, 255, 0.025);
+
+    color:
+        rgba(255, 255, 255, 0.65);
+
+    font-family:
+        "Metal Mania",
+        cursive;
+
+    font-size:
+        0.58em;
+
+    letter-spacing:
+        0.1em;
+
+    cursor:
+        pointer;
+
+    transition:
+        all 0.2s ease;
+}
+
+.admin-view-button:hover {
+    background:
+        #fff;
+
+    color:
+        #000;
+
+    border-color:
+        #fff;
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================================
+   EMPTY / ERROR
+   ========================================================= */
+
+.admin-orders-empty {
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    padding:
+        4em 1.5em;
+
+    text-align:
+        center;
+}
+
+.admin-empty-icon {
+    width:
+        3em;
+
+    height:
+        3em;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    margin:
+        0 auto 1em;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.2);
+
+    border-radius:
+        50%;
+
+    color:
+        rgba(255, 255, 255, 0.45);
+}
+
+.admin-orders-empty h3 {
+    margin:
+        0 0 0.5em;
+
+    color:
+        #fff;
+
+    font-size:
+        1em;
+}
+
+.admin-orders-empty p {
+    margin:
+        0;
+
+    color:
+        rgba(255, 255, 255, 0.35);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size:
+        0.68em;
+}
+
+.admin-error {
+    width:
+        min(32em, 100%);
+
+    margin:
+        3em auto;
+
+    padding:
+        2.5em 1.5em;
+
+    text-align:
+        center;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+
+    border-radius:
+        1em;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(26, 26, 26, 0.96),
+            rgba(8, 8, 8, 0.98)
+        );
+}
+
+.admin-error-icon {
+    width:
+        3em;
+
+    height:
+        3em;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    margin:
+        0 auto 1em;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.3);
+
+    border-radius:
+        50%;
+
+    color:
+        #fff;
+
+    font-family:
+        Arial,
+        sans-serif;
+}
+
+.admin-error h2 {
+    margin:
+        0 0 0.6em;
+
+    color:
+        #fff;
+
+    font-size:
+        1.1em;
+}
+
+.admin-error p {
+    margin:
+        0 0 1.5em;
+
+    color:
+        rgba(255, 255, 255, 0.38);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size:
+        0.7em;
+
+    line-height:
+        1.7;
+}
+
+.admin-action-button {
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    min-height:
+        2.9em;
+
+    padding:
+        0 1.3em;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.25);
+
+    border-radius:
+        0.45em;
+
+    background:
+        rgba(255, 255, 255, 0.04);
+
+    color:
+        #fff;
+
+    text-decoration:
+        none;
+
+    font-size:
+        0.62em;
+
+    letter-spacing:
+        0.12em;
+
+    transition:
+        all 0.2s ease;
+}
+
+.admin-action-button:hover {
+    background:
+        #fff;
+
+    color:
+        #000;
+
+    border-color:
+        #fff;
+}
+
+
+/* =========================================================
+   MODAL
+   ========================================================= */
+
+.admin-modal {
+    position:
+        fixed;
+
+    inset:
+        0;
+
+    z-index:
+        99999;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding:
+        1em;
+}
+
+.admin-modal[hidden] {
+    display:
+        none;
+}
+
+.admin-modal-backdrop {
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(255, 255, 255, 0.08),
+            rgba(0, 0, 0, 0.92)
+        );
+
+    backdrop-filter:
+        blur(8px);
+}
+
+.admin-modal-box {
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    width:
+        min(58em, 94vw);
+
+    max-height:
+        92vh;
+
+    overflow-y:
+        auto;
+
+    padding:
+        2em;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.18);
+
+    border-radius:
+        1.2em;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(28, 28, 28, 0.99),
+            rgba(7, 7, 7, 0.99)
+        );
+
+    box-shadow:
+        0 35px 90px
+        rgba(0, 0, 0, 0.85);
+
+    animation:
+        adminModalEnter
+        0.25s
+        ease
+        both;
+}
+
+@keyframes adminModalEnter {
+
+    from {
+        opacity:
+            0;
+
+        transform:
+            translateY(15px)
+            scale(0.96);
+    }
+
+    to {
+        opacity:
+            1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+.admin-modal-close {
+    position:
+        absolute;
+
+    top:
+        0.65em;
+
+    right:
+        0.8em;
+
+    width:
+        2.2em;
+
+    height:
+        2.2em;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    padding:
+        0;
+
+    border:
+        0;
+
+    background:
+        transparent;
+
+    color:
+        rgba(255, 255, 255, 0.4);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size:
+        1.5em;
+
+    cursor:
+        pointer;
+
+    transition:
+        all 0.2s ease;
+}
+
+.admin-modal-close:hover {
+    color:
+        #fff;
+
+    transform:
+        rotate(90deg);
+}
+
+
+/* =========================================================
+   MODAL HEADER
+   ========================================================= */
+
+.admin-modal-header {
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        1.5em;
+
+    padding:
+        0 2.5em 1.5em 0;
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+}
+
+.admin-modal-label {
+    color:
+        rgba(255, 255, 255, 0.32);
+
+    font-size:
+        0.65em;
+
+    letter-spacing:
+        0.18em;
+}
+
+.admin-modal-header h2 {
+    margin:
+        0.35em 0 0;
+
+    color:
+        #fff;
+
+    font-size:
+        1.5em;
+
+    letter-spacing:
+        0.08em;
+}
+
+
+/* =========================================================
+   DETAIL SECTIONS
+   ========================================================= */
+
+.admin-detail-section {
+    padding:
+        1.3em 0;
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.07);
+}
+
+.admin-detail-title {
+    margin-bottom:
+        1em;
+
+    color:
+        rgba(255, 255, 255, 0.35);
+
+    font-size:
+        0.62em;
+
+    letter-spacing:
+        0.16em;
+}
+
+.admin-detail-grid {
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        0.8em;
+}
+
+.admin-detail-box {
+    min-height:
+        4.5em;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        center;
+
+    gap:
+        0.35em;
+
+    padding:
+        0.8em 1em;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    border-radius:
+        0.6em;
+
+    background:
+        rgba(255, 255, 255, 0.018);
+}
+
+.admin-detail-full {
+    grid-column:
+        1 / -1;
+}
+
+.admin-detail-box span {
+    color:
+        rgba(255, 255, 255, 0.28);
+
+    font-size:
+        0.52em;
+
+    letter-spacing:
+        0.1em;
+}
+
+.admin-detail-box strong {
+    color:
+        rgba(255, 255, 255, 0.75);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size:
+        0.65em;
+
+    line-height:
+        1.7;
+
+    direction:
+        rtl;
+}
+
+
+/* =========================================================
+   MODAL ITEMS
+   ========================================================= */
+
+.admin-modal-items {
+    display:
+        flex;
+
+    flex-direction:
+        column;
+}
+
+.admin-modal-item {
+    display:
+        grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        auto
+        auto;
+
+    gap:
+        1.2em;
+
+    align-items:
+        center;
+
+    padding:
+        0.9em 0;
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.06);
+}
+
+.admin-modal-item:last-child {
+    border-bottom:
+        0;
+}
+
+.admin-modal-item-name {
+    color:
+        #fff;
+
+    font-size:
+        0.7em;
+}
+
+.admin-modal-item-meta {
+    margin-top:
+        0.3em;
+
+    color:
+        rgba(255, 255, 255, 0.3);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size:
+        0.54em;
+}
+
+.admin-modal-item-quantity {
+    color:
+        rgba(255, 255, 255, 0.4);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size:
+        0.58em;
+}
+
+.admin-modal-item-total {
+    color:
+        rgba(255, 255, 255, 0.75);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size:
+        0.6em;
+
+    direction:
+        rtl;
+}
+
+
+/* =========================================================
+   SUMMARY
+   ========================================================= */
+
+.admin-summary {
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        0.7em;
+}
+
+.admin-summary > div {
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        1em;
+}
+
+.admin-summary span {
+    color:
+        rgba(255, 255, 255, 0.35);
+
+    font-size:
+        0.58em;
+
+    letter-spacing:
+        0.08em;
+}
+
+.admin-summary strong {
+    color:
+        rgba(255, 255, 255, 0.75);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size:
+        0.6em;
+
+    direction:
+        rtl;
+}
+
+.admin-summary-total {
+    margin-top:
+        0.5em;
+
+    padding-top:
+        0.9em;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+}
+
+.admin-summary-total span {
+    color:
+        #fff;
+
+    font-size:
+        0.82em;
+}
+
+.admin-summary-total strong {
+    color:
+        #fff;
+
+    font-size:
+        0.9em;
+}
+
+
+/* =========================================================
+   STATUS CONTROL
+   ========================================================= */
+
+.status-control {
+    display:
+        flex;
+
+    gap:
+        0.7em;
+}
+
+.status-control select {
+    flex:
+        1;
+
+    min-height:
+        3.2em;
+}
+
+.update-status-button {
+    min-height:
+        3.2em;
+
+    padding:
+        0 1.2em;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.3);
+
+    border-radius:
+        0.5em;
+
+    background:
+        rgba(255, 255, 255, 0.04);
+
+    color:
+        #fff;
+
+    font-family:
+        "Metal Mania",
+        cursive;
+
+    font-size:
+        0.6em;
+
+    letter-spacing:
+        0.1em;
+
+    cursor:
+        pointer;
+
+    transition:
+        all 0.2s ease;
+}
+
+.update-status-button:hover {
+    background:
+        #fff;
+
+    color:
+        #000;
+
+    border-color:
+        #fff;
+
+    box-shadow:
+        0 0 18px
+        rgba(255, 255, 255, 0.15);
+}
+
+.update-status-button:disabled {
+    opacity:
+        0.45;
+
+    cursor:
+        not-allowed;
+}
+
+
+/* =========================================================
+   DATE
+   ========================================================= */
+
+.admin-order-date {
+    padding-top:
+        1em;
+
+    color:
+        rgba(255, 255, 255, 0.3);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size:
+        0.58em;
+}
+
+.admin-order-date strong {
+    color:
+        rgba(255, 255, 255, 0.65);
+}
+
+
+/* =========================================================
+   SUCCESS / ERROR MODAL
+   ========================================================= */
+
+.admin-success-box {
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    width:
+        min(27em, 100%);
+
+    padding:
+        2.3em 1.6em 1.6em;
+
+    text-align:
+        center;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.18);
+
+    border-radius:
+        1em;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(30, 30, 30, 0.98),
+            rgba(7, 7, 7, 0.99)
+        );
+
+    box-shadow:
+        0 30px 80px
+        rgba(0, 0, 0, 0.8);
+
+    animation:
+        adminModalEnter
+        0.25s
+        ease
+        both;
+}
+
+.admin-success-icon {
+    width:
+        3.1em;
+
+    height:
+        3.1em;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    margin:
+        0 auto 1em;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.28);
+
+    border-radius:
+        50%;
+
+    color:
+        #fff;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size:
+        1.2em;
+}
+
+.admin-success-box h2 {
+    margin:
+        0 0 0.55em;
+
+    color:
+        #fff;
+
+    font-size:
+        1.18em;
+}
+
+.admin-success-box p {
+    margin:
+        0;
+
+    color:
+        rgba(255, 255, 255, 0.43);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size:
+        0.7em;
+
+    line-height:
+        1.8;
+
+    direction:
+        rtl;
+}
+
+.admin-success-button {
+    width:
+        100%;
+
+    min-height:
+        2.9em;
+
+    margin-top:
+        1.4em;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.3);
+
+    border-radius:
+        0.45em;
+
+    background:
+        rgba(255, 255, 255, 0.04);
+
+    color:
+        #fff;
+
+    font-family:
+        "Metal Mania",
+        cursive;
+
+    font-size:
+        0.58em;
+
+    letter-spacing:
+        0.1em;
+
+    cursor:
+        pointer;
+
+    transition:
+        all 0.2s ease;
+}
+
+.admin-success-button:hover {
+    background:
+        #fff;
+
+    color:
+        #000;
+
+    border-color:
+        #fff;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 40em) {
+
+    .admin-page {
+        width:
+            94%;
+
+        padding:
+            1.5em 0 3em;
+    }
+
+    .admin-hero {
+        padding:
+            1.5em 0 2em;
+    }
+
+    .admin-title {
+        font-size:
+            3.2em !important;
+
+        letter-spacing:
+            0.05em;
+    }
+
+    .admin-subtitle {
+        font-size:
+            0.72em;
+    }
+
+    .admin-stats {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+    .admin-card-header {
+        padding:
+            1.1em;
+    }
+
+    .refresh-button {
+        font-size:
+            0.52em;
+    }
+
+    .admin-toolbar {
+        align-items:
+            stretch;
+
+        flex-direction:
+            column;
+    }
+
+    .admin-orders-list {
+        padding:
+            0 1.1em 1em;
+    }
+
+    .admin-order-item {
+        grid-template-columns:
+            1fr;
+
+        gap:
+            0.8em;
+    }
+
+    .admin-order-right {
+        width:
+            100%;
+
+        justify-content:
+            space-between;
+
+        flex-wrap:
+            wrap;
+    }
+
+    .admin-modal-box {
+        width:
+            96vw;
+
+        padding:
+            1.2em;
+    }
+
+    .admin-modal-header {
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+    }
+
+    .admin-detail-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+    .admin-detail-full {
+        grid-column:
+            auto;
+    }
+
+    .admin-modal-item {
+        grid-template-columns:
+            minmax(0, 1fr)
+            auto;
+    }
+
+    .admin-modal-item-total {
+        grid-column:
+            2;
+        grid-row:
+            2;
+    }
+
+    .status-control {
+        flex-direction:
+            column;
+    }
+
+}
+
+@media (max-width: 420px) {
+
+    .admin-stats {
+        grid-template-columns:
+            1fr;
+    }
+
+}
+/* =========================================================
+   ADMIN TYPOGRAPHY / SIZE UPGRADE
+   ========================================================= */
+
+.admin-page,
+.admin-card,
+.admin-stat-card,
+.admin-modal-box,
+.admin-error,
+.admin-success-box {
+    font-family: "Metal Mania", cursive;
+}
+
+
+/* =========================================================
+   BIGGER STAT CARDS
+   ========================================================= */
+
+.admin-stat-card {
+    min-height: 10em;
+    padding: 1.7em;
+}
+
+.admin-stat-label {
+    font-size: 0.68em;
+    letter-spacing: 0.16em;
+}
+
+.admin-stat-value {
+    margin-top: 0.28em;
+    font-size: 2.8em;
+    line-height: 1;
+    letter-spacing: 0.04em;
+}
+
+
+/* =========================================================
+   ORDER ROW
+   ========================================================= */
+
+.admin-order-item {
+    padding: 1.55em 0;
+    gap: 1.5em;
+}
+
+.admin-order-id {
+    font-size: 1em;
+    letter-spacing: 0.1em;
+}
+
+.admin-customer {
+    font-size: 0.7em;
+}
+
+.admin-order-date {
+    font-size: 0.62em;
+}
+
+.admin-order-total {
+    font-size: 0.78em;
+}
+
+.admin-status {
+    min-width: 8.5em;
+    min-height: 2.5em;
+    font-size: 0.58em;
+}
+
+.admin-view-button {
+    min-height: 2.8em;
+    padding: 0 1.1em;
+    font-size: 0.62em;
+}
+
+
+/* =========================================================
+   TOOLBAR
+   ========================================================= */
+
+.admin-filter label {
+    font-size: 0.62em;
+}
+
+.admin-filter select,
+.status-control select {
+    min-height: 3em;
+    font-size: 0.68em;
+}
+
+.admin-order-count {
+    font-size: 0.62em;
+}
+
+.admin-order-count span {
+    font-size: 1.45em;
+}
+
+
+/* =========================================================
+   MODAL
+   ========================================================= */
+
+.admin-modal-box {
+    width: min(62em, 94vw);
+    padding: 2.2em;
+}
+
+.admin-modal-header h2 {
+    font-size: 1.75em;
+}
+
+.admin-modal-label {
+    font-size: 0.7em;
+}
+
+.admin-detail-title {
+    font-size: 0.68em;
+}
+
+.admin-detail-box {
+    min-height: 5em;
+    padding: 1em 1.1em;
+}
+
+.admin-detail-box span {
+    font-size: 0.58em;
+}
+
+.admin-detail-box strong {
+    font-size: 0.72em;
+}
+
+.admin-modal-item {
+    padding: 1.05em 0;
+}
+
+.admin-modal-item-name {
+    font-size: 0.78em;
+}
+
+.admin-modal-item-meta {
+    font-size: 0.58em;
+}
+
+.admin-modal-item-quantity {
+    font-size: 0.64em;
+}
+
+.admin-modal-item-total {
+    font-size: 0.68em;
+}
+
+.admin-summary span {
+    font-size: 0.64em;
+}
+
+.admin-summary strong {
+    font-size: 0.67em;
+}
+
+.admin-summary-total span {
+    font-size: 0.9em;
+}
+
+.admin-summary-total strong {
+    font-size: 1em;
+}
+
+.update-status-button {
+    min-height: 3.3em;
+    font-size: 0.65em;
+}
+
+
+/* =========================================================
+   DESKTOP STAT GRID
+   ========================================================= */
+
+@media (min-width: 65em) {
+
+    .admin-stats {
+        gap: 1.2em;
+    }
+
+    .admin-stat-card {
+        min-height: 11em;
+    }
+
+    .admin-stat-value {
+        font-size: 3.15em;
+    }
+
+    .admin-order-item {
+        grid-template-columns:
+            minmax(0, 1fr)
+            auto;
+        padding: 1.7em 0;
+    }
+
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | NICHERZ</title>
+    <link rel="stylesheet" href="style-shop.css">
+    <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="manual-payment.css">
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="./Images/logo.webp">
+</head>
+
+<body>
+    <div class="smoke-background" aria-hidden="true">
+        <div class="smoke smoke-one"></div>
+        <div class="smoke smoke-two"></div>
+        <div class="smoke smoke-three"></div>
+    </div>
+    <header class="shop-header">
+        <div class="shop-header-inner">
+            <div class="brand-wrap">
+                <div class="brand-mark"><img src="./Images/logo.webp" alt="NICHERZ logo" class="footer-logo"></div>
+                <div class="brand-copy"><span class="brand-name">NICHERZ</span><small>ARCHIVE</small></div>
+            </div>
+            <nav class="header-nav" aria-label="Main navigation"><a href="/">HOME</a><a
+                    href="/shop">SHOP</a><a href="/#gallery">GALLERY</a><a
+                    href="/account">ACCOUNT</a><a href="/login">LOGIN</a></nav>
+            <div class="header-actions"><a href="/cart" class="cart-pill">CART <span
+                        id="checkoutCartCount">(0)</span></a></div>
+        </div>
+    </header>
+    <main class="checkout-page">
+        <section class="checkout-hero">
+            <h1 class="checkout-title">CHECKOUT</h1>
+            <p class="checkout-subtitle">COMPLETE YOUR ORDER</p>
+        </section>
+        <section id="checkoutPageError" class="checkout-page-error" hidden>
+            <div class="checkout-error-icon">!</div>
+            <h2>SOMETHING WENT WRONG</h2>
+            <p id="checkoutPageErrorText">Unable to load checkout.</p><a href="/cart" class="checkout-back-button">←
+                BACK TO CART</a>
+        </section>
+        <section id="checkoutContent" class="checkout-container" hidden>
+            <div class="checkout-main">
+                <section class="checkout-card">
+                    <div class="checkout-card-header">
+                        <div class="checkout-section-number">01</div>
+                        <div>
+                            <h2>SHIPPING DETAILS</h2>
+                            <p>DELIVERY INFORMATION</p>
+                        </div>
+                    </div>
+                    <form id="checkoutForm" class="checkout-form" novalidate>
+                        <div class="checkout-field"><label for="shippingName">FULL NAME</label><input id="shippingName"
+                                name="shippingName" type="text" autocomplete="name" maxlength="120"
+                                placeholder="نام و نام خانوادگی" required><small>نام و نام خانوادگی گیرنده</small></div>
+                        <div class="checkout-field"><label for="shippingPhone">PHONE NUMBER</label><input
+                                id="shippingPhone" name="shippingPhone" type="tel" autocomplete="tel" maxlength="30"
+                                placeholder="09xxxxxxxxx" required><small>شماره تماس برای هماهنگی ارسال</small></div>
+                                <div class="checkout-field">
+    <label for="shippingCity">CITY</label>
+
+    <input
+        id="shippingCity"
+        name="shippingCity"
+        type="text"
+        autocomplete="address-level2"
+        maxlength="100"
+        placeholder="مثلاً تهران"
+        required
+    >
+
+    <small>شهری که سفارش به آن ارسال می‌شود</small>
+</div>
+                        <div class="checkout-field"><label for="shippingAddress">SHIPPING ADDRESS</label><textarea
+                                id="shippingAddress" name="shippingAddress" autocomplete="street-address"
+                                maxlength="500" rows="5" placeholder="آدرس کامل خود را وارد کنید"
+                                required></textarea><small>شهر، خیابان، پلاک، واحد و سایر جزئیات</small></div>
+                        <button id="placeOrderBtn" class="checkout-submit" type="submit"><span
+                                class="checkout-submit-text">ثبت سفارش و ادامه پرداخت</span><span
+                                class="checkout-submit-arrow">→</span></button>
+                    </form>
+                </section>
+            </div>
+            <aside class="checkout-sidebar">
+                <section class="checkout-card order-card">
+                    <div class="checkout-card-header">
+                        <div class="checkout-section-number">02</div>
+                        <div>
+                            <h2>YOUR ORDER</h2>
+                            <p>ORDER SUMMARY</p>
+                        </div>
+                    </div>
+                    <div id="checkoutItems" class="checkout-items"></div>
+                    <div class="checkout-divider"></div>
+                    <div class="checkout-summary-row"><span>SUBTOTAL</span><strong id="checkoutSubtotal">۰
+                            تومان</strong></div>
+                    <div class="checkout-summary-row"><span>SHIPPING</span><strong id="checkoutShipping">۰
+                            تومان</strong></div>
+                    <div class="checkout-summary-row"><span>TAX</span><strong id="checkoutTax">۰ تومان</strong></div>
+                    <div class="checkout-summary-row"><span>DISCOUNT</span><strong id="checkoutDiscount">۰
+                            تومان</strong></div>
+                    <div class="checkout-divider"></div>
+                    <div class="checkout-total-row"><span>TOTAL</span><strong id="checkoutTotal">۰ تومان</strong></div>
+                    <a href="/cart" class="checkout-back-cart">← BACK TO CART</a>
+                </section>
+                <div class="checkout-brand">
+                    <div class="checkout-brand-symbol">N</div>
+                    <div><strong>NICHERZ</strong><span>ARCHIVE</span></div>
+                </div>
+            </aside>
+        </section>
+    </main>
+    <div id="successModal" class="checkout-modal" hidden>
+        <div class="checkout-modal-backdrop" data-close-success></div>
+        <div class="checkout-modal-box">
+            <div class="modal-icon">✓</div>
+            <div class="modal-label">ORDER COMPLETE</div>
+            <h2>سفارش با موفقیت ثبت شد</h2>
+            <p>سفارش شما با موفقیت ثبت شده است.</p>
+            <div class="order-number"><span>ORDER NUMBER</span><strong id="successOrderId">—</strong></div>
+            <div class="modal-buttons"><a href="/shop" class="modal-primary-button">CONTINUE SHOPPING</a><a
+                    href="/account" class="modal-secondary-button">MY ACCOUNT</a></div>
+        </div>
+    </div>
+    <div id="orderErrorModal" class="checkout-modal" hidden>
+        <div class="checkout-modal-backdrop" data-close-error></div>
+        <div class="checkout-modal-box"><button id="closeErrorModal" type="button" class="modal-close">×</button>
+            <div class="modal-icon">!</div>
+            <div class="modal-label">ORDER ERROR</div>
+            <h2>سفارش ثبت نشد</h2>
+            <p id="orderErrorText">خطایی در ثبت سفارش رخ داد.</p><button id="errorModalOk" type="button"
+                class="modal-primary-button modal-ok">متوجه شدم</button>
+        </div>
+    </div>
+    <footer class="shop-footer">
+        <div class="footer-grid">
+            <div class="footer-brand"><span class="footer-logo">N</span>
+                <div>
+                    <h3>NICHERZ</h3>
+                    <p>Curated chaos for the loudest souls.</p>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>SHOP</h4><a href="/shop">Shop</a><a href="/cart">Cart</a>
+            </div>
+            <div class="footer-links">
+                <h4>INFO</h4><a href="/contact">Contact</a><a href="#">Shipping</a>
+            </div>
+            <div class="footer-links">
+                <h4>FOLLOW</h4><a href="https://instagram.com/nicherzz" target="_blank"
+                    rel="noopener noreferrer">Instagram</a><a href="https://t.me/nicherz" target="_blank"
+                    rel="noopener noreferrer">Telegram</a>
+            </div>
+        </div>
+        <div class="footer-bottom"><span>© 2026 NICHERZ</span><span>WEAR THE LEGEND</span></div>
+    </footer>
+    <script type="module" src="checkout.js"></script>
+    <script type="module" src="header-auth.js"></script>
+</body>
+
+</html>

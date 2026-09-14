@@ -1,0 +1,1917 @@
+/* =========================================================
+   ORDERS PAGE
+========================================================= */
+
+.orders-page {
+    position: relative;
+    z-index: 1;
+
+    width: min(90%, 80em);
+
+    margin: 0 auto;
+
+    padding: 3em 0 5em;
+
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.orders-hero {
+    text-align: center;
+
+    padding: 2em 0 3em;
+}
+
+.orders-title {
+    margin: 0 !important;
+    padding: 0 !important;
+
+    color: #fff !important;
+
+    font-size: clamp(3.2em, 6vw, 6em);
+
+    font-weight: normal;
+
+    letter-spacing: 0.08em;
+
+    line-height: 1;
+
+    text-shadow:
+        0 0 20px
+        rgba(255, 255, 255, 0.12);
+}
+
+.orders-subtitle {
+    margin: 0.9em 0 0;
+
+    color:
+        rgba(255, 255, 255, 0.52);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 0.95em;
+
+    letter-spacing: 0.2em;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.orders-loading {
+    min-height: 18em;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 1em;
+}
+
+.orders-loader {
+    width: 42px;
+
+    height: 42px;
+
+    border:
+        2px solid
+        rgba(255, 255, 255, 0.12);
+
+    border-top-color:
+        rgba(255, 255, 255, 0.85);
+
+    border-radius: 50%;
+
+    animation:
+        ordersSpin
+        0.8s
+        linear
+        infinite;
+}
+
+@keyframes ordersSpin {
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+.orders-loading p {
+    margin: 0;
+
+    color:
+        rgba(255, 255, 255, 0.4);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 0.8em;
+
+    letter-spacing: 0.16em;
+}
+
+
+/* =========================================================
+   LAYOUT
+========================================================= */
+
+.orders-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        24em;
+
+    gap: 1.6em;
+
+    align-items: start;
+}
+
+.orders-main {
+    min-width: 0;
+}
+
+.orders-sidebar {
+    position: sticky;
+
+    top: 1.5em;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1em;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.orders-card {
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(26, 26, 26, 0.96),
+            rgba(8, 8, 8, 0.98)
+        );
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.14);
+
+    border-radius: 1.2em;
+
+    box-shadow:
+        0 18px 35px
+        rgba(0, 0, 0, 0.55),
+
+        inset 0 1px 0
+        rgba(255, 255, 255, 0.08);
+}
+
+.orders-card::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.09),
+            transparent 35%,
+            rgba(255, 255, 255, 0.025)
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.orders-card-header {
+    position: relative;
+
+    z-index: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 1em;
+
+    padding:
+        1.4em
+        1.5em;
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+}
+
+.orders-section-number {
+    width: 2.2em;
+
+    height: 2.2em;
+
+    flex-shrink: 0;
+
+    display: grid;
+
+    place-items: center;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.28);
+
+    color:
+        rgba(255, 255, 255, 0.75);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 0.95em;
+}
+
+.orders-card-header h2 {
+    margin: 0;
+
+    color: #fff;
+
+    font-size: 1.15em;
+
+    font-weight: normal;
+
+    letter-spacing: 0.12em;
+}
+
+.orders-card-header p {
+    margin:
+        0.35em 0 0;
+
+    color:
+        rgba(255, 255, 255, 0.32);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 0.57em;
+
+    letter-spacing: 0.18em;
+}
+
+
+/* =========================================================
+   ORDER LIST
+========================================================= */
+
+.orders-list {
+    position: relative;
+
+    z-index: 1;
+
+    padding:
+        0 1.5em 1em;
+}
+
+
+/* =========================================================
+   ORDER CARD
+   IMPORTANT:
+   These classes match orders.js
+========================================================= */
+
+.order-card {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        auto;
+
+    gap: 1.2em;
+
+    align-items: center;
+
+    padding:
+        1.3em 0;
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.07);
+}
+
+.order-card:last-child {
+    border-bottom: 0;
+}
+
+.order-card-main {
+    min-width: 0;
+}
+
+.order-card-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 1em;
+}
+
+.order-card-number {
+    color: #fff;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 0.88em;
+
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+}
+
+.order-card-date {
+    margin-top: 0.4em;
+
+    color:
+        rgba(255, 255, 255, 0.32);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 0.62em;
+}
+
+
+/* =========================================================
+   ORDER INFO
+========================================================= */
+
+.order-card-info {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 1.6em;
+
+    margin-top: 1em;
+}
+
+.order-card-info-item {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0.28em;
+
+    min-width: 6.5em;
+}
+
+.order-card-info-item span {
+    color:
+        rgba(255, 255, 255, 0.28);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 0.5em;
+
+    letter-spacing: 0.1em;
+}
+
+.order-card-info-item strong {
+    color:
+        rgba(255, 255, 255, 0.78);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 0.66em;
+
+    line-height: 1.4;
+}
+
+.order-card-info-item strong.payment-status {
+    font-size: 0.56em;
+
+    letter-spacing: 0.06em;
+}
+
+
+/* =========================================================
+   PAYMENT STATUS
+========================================================= */
+
+.payment-status {
+    white-space: nowrap;
+}
+
+.payment-status.paid {
+    color:
+        rgba(255, 255, 255, 0.95);
+}
+
+.payment-status.pending {
+    color:
+        rgba(255, 255, 255, 0.72);
+}
+
+.payment-status.unpaid {
+    color:
+        rgba(255, 255, 255, 0.5);
+}
+
+.payment-status.failed {
+    color:
+        rgba(255, 255, 255, 0.38);
+}
+
+.payment-status.cancelled {
+    color:
+        rgba(255, 255, 255, 0.38);
+}
+
+.payment-status.refunded {
+    color:
+        rgba(255, 255, 255, 0.7);
+}
+
+
+/* =========================================================
+   ORDER STATUS
+========================================================= */
+
+.order-status {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 6.8em;
+
+    min-height: 2.2em;
+
+    padding:
+        0.3em 0.75em;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.2);
+
+    border-radius: 999px;
+
+    color:
+        rgba(255, 255, 255, 0.68);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 0.58em;
+
+    font-weight: normal;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+}
+
+.order-status.pending {
+    border-color:
+        rgba(255, 255, 255, 0.22);
+
+    color:
+        rgba(255, 255, 255, 0.68);
+}
+
+.order-status.confirmed {
+    border-color:
+        rgba(255, 255, 255, 0.45);
+
+    color:
+        rgba(255, 255, 255, 0.78);
+}
+
+.order-status.processing {
+    border-color:
+        rgba(255, 255, 255, 0.5);
+
+    color:
+        rgba(255, 255, 255, 0.82);
+
+    box-shadow:
+        0 0 12px
+        rgba(255, 255, 255, 0.06);
+}
+
+.order-status.shipped {
+    border-color:
+        rgba(255, 255, 255, 0.55);
+
+    color:
+        rgba(255, 255, 255, 0.86);
+}
+
+.order-status.delivered {
+    color: #fff;
+
+    border-color:
+        rgba(255, 255, 255, 0.65);
+
+    background:
+        rgba(255, 255, 255, 0.07);
+
+    box-shadow:
+        0 0 14px
+        rgba(255, 255, 255, 0.05);
+}
+
+.order-status.cancelled {
+    color:
+        rgba(255, 255, 255, 0.4);
+
+    border-color:
+        rgba(255, 255, 255, 0.1);
+
+    background:
+        rgba(255, 255, 255, 0.01);
+}
+
+
+/* =========================================================
+   VIEW BUTTON
+   IMPORTANT:
+   Matches orders.js => .orders-view-button
+========================================================= */
+
+.order-card-action {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.orders-view-button {
+    min-height: 2.6em;
+
+    padding:
+        0 1em;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.18);
+
+    border-radius: 0.45em;
+
+    background:
+        rgba(255, 255, 255, 0.025);
+
+    color:
+        rgba(255, 255, 255, 0.62);
+
+    font-family:
+        "Metal Mania",
+        cursive;
+
+    font-size: 0.62em;
+
+    letter-spacing: 0.1em;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.orders-view-button:hover {
+    transform:
+        translateY(-2px);
+
+    color: #000;
+
+    background: #fff;
+
+    border-color: #fff;
+
+    box-shadow:
+        0 0 18px
+        rgba(255, 255, 255, 0.13);
+}
+
+.orders-view-button:active {
+    transform:
+        translateY(0);
+}
+
+.orders-view-button:focus-visible {
+    outline:
+        2px solid
+        rgba(255, 255, 255, 0.75);
+
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.orders-empty {
+    position: relative;
+
+    z-index: 1;
+
+    padding:
+        4em 1.5em;
+
+    text-align: center;
+}
+
+.orders-empty-icon {
+    width: 3em;
+
+    height: 3em;
+
+    display: grid;
+
+    place-items: center;
+
+    margin:
+        0 auto 1em;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.2);
+
+    border-radius: 50%;
+
+    color:
+        rgba(255, 255, 255, 0.45);
+
+    font-family:
+        Arial,
+        sans-serif;
+}
+
+.orders-empty h3 {
+    margin:
+        0 0 0.5em;
+
+    color: #fff;
+
+    font-size: 1em;
+}
+
+.orders-empty p {
+    margin:
+        0 0 1.5em;
+
+    color:
+        rgba(255, 255, 255, 0.38);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 0.7em;
+}
+
+
+/* =========================================================
+   GENERIC BUTTON
+========================================================= */
+
+.orders-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 2.9em;
+
+    padding:
+        0 1.3em;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.25);
+
+    border-radius: 0.45em;
+
+    background:
+        rgba(255, 255, 255, 0.04);
+
+    color: #fff;
+
+    font-family:
+        "Metal Mania",
+        cursive;
+
+    font-size: 0.62em;
+
+    letter-spacing: 0.12em;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.orders-button:hover {
+    color: #000;
+
+    background: #fff;
+
+    border-color: #fff;
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 0 18px
+        rgba(255, 255, 255, 0.15);
+}
+
+
+/* =========================================================
+   ACCOUNT MENU
+========================================================= */
+
+.orders-menu {
+    position: relative;
+
+    z-index: 1;
+
+    padding:
+        0.8em 1.5em 1.1em;
+}
+
+.orders-menu-item {
+    width: 100%;
+
+    min-height: 3em;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    box-sizing: border-box;
+
+    padding:
+        0 0.9em;
+
+    margin-bottom: 0.45em;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.1);
+
+    border-radius: 0.45em;
+
+    background:
+        rgba(255, 255, 255, 0.02);
+
+    color:
+        rgba(255, 255, 255, 0.58);
+
+    text-decoration: none;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 0.62em;
+
+    letter-spacing: 0.11em;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.orders-menu-item:last-child {
+    margin-bottom: 0;
+}
+
+.orders-menu-item:hover {
+    color: #fff;
+
+    background:
+        rgba(255, 255, 255, 0.07);
+
+    border-color:
+        rgba(255, 255, 255, 0.35);
+
+    transform:
+        translateY(-2px);
+}
+
+.orders-menu-item.active {
+    color: #fff;
+
+    background:
+        rgba(255, 255, 255, 0.065);
+
+    border-color:
+        rgba(255, 255, 255, 0.45);
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.orders-brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 1em;
+
+    padding:
+        1em 1.2em;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.1);
+
+    border-radius: 0.9em;
+
+    background:
+        rgba(255, 255, 255, 0.02);
+}
+
+.orders-brand-symbol {
+    width: 2.7em;
+
+    height: 2.7em;
+
+    flex-shrink: 0;
+
+    display: grid;
+
+    place-items: center;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.25);
+
+    color: #fff;
+
+    font-family:
+        "Metal Mania",
+        cursive;
+
+    font-size: 1em;
+}
+
+.orders-brand strong {
+    display: block;
+
+    color: #fff;
+
+    font-size: 0.72em;
+
+    letter-spacing: 0.18em;
+}
+
+.orders-brand span {
+    display: block;
+
+    margin-top: 0.25em;
+
+    color:
+        rgba(255, 255, 255, 0.3);
+
+    font-size: 0.52em;
+
+    letter-spacing: 0.22em;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.orders-error {
+    width:
+        min(32em, 100%);
+
+    margin:
+        3em auto;
+
+    padding:
+        2.5em 1.5em;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+
+    border-radius: 1em;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(26, 26, 26, 0.96),
+            rgba(8, 8, 8, 0.98)
+        );
+
+    box-shadow:
+        0 18px 35px
+        rgba(0, 0, 0, 0.55);
+}
+
+.orders-error-icon {
+    width: 3em;
+
+    height: 3em;
+
+    display: grid;
+
+    place-items: center;
+
+    margin:
+        0 auto 1em;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.3);
+
+    border-radius: 50%;
+
+    color: #fff;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 0.9em;
+}
+
+.orders-error h2 {
+    margin:
+        0 0 0.6em;
+
+    color: #fff;
+
+    font-size: 1.1em;
+}
+
+.orders-error p {
+    margin:
+        0 0 1.5em;
+
+    color:
+        rgba(255, 255, 255, 0.38);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 0.72em;
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.order-modal {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 99999;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 1em;
+
+    box-sizing: border-box;
+}
+
+.order-modal[hidden] {
+    display: none;
+}
+
+.order-modal-backdrop {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(255, 255, 255, 0.08),
+            rgba(0, 0, 0, 0.91)
+        );
+
+    backdrop-filter:
+        blur(8px);
+}
+
+.order-modal-box {
+    position: relative;
+
+    z-index: 1;
+
+    width:
+        min(58em, 94vw);
+
+    max-height:
+        92vh;
+
+    overflow-y:
+        auto;
+
+    padding: 2em;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.18);
+
+    border-radius:
+        1.2em;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(28, 28, 28, 0.99),
+            rgba(7, 7, 7, 0.99)
+        );
+
+    box-shadow:
+        0 35px 90px
+        rgba(0, 0, 0, 0.85),
+
+        0 0 35px
+        rgba(255, 255, 255, 0.07);
+
+    animation:
+        orderModalEnter
+        0.25s
+        ease
+        both;
+}
+
+@keyframes orderModalEnter {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(18px)
+            scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+/* =========================================================
+   MODAL CLOSE
+========================================================= */
+
+.order-modal-close {
+    position: absolute;
+
+    top: 0.7em;
+
+    right: 0.8em;
+
+    width: 2.2em;
+
+    height: 2.2em;
+
+    display: grid;
+
+    place-items: center;
+
+    padding: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    color:
+        rgba(255, 255, 255, 0.4);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 1.5em;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.order-modal-close:hover {
+    color: #fff;
+
+    transform:
+        rotate(90deg);
+}
+
+.order-modal-close:focus-visible {
+    outline:
+        2px solid
+        rgba(255, 255, 255, 0.75);
+
+    outline-offset: 2px;
+}
+
+
+/* =========================================================
+   MODAL TOP
+========================================================= */
+
+.order-modal-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 1.5em;
+
+    padding:
+        0 2.5em 1.5em 0.2em;
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+}
+
+.order-modal-label {
+    color:
+        rgba(255, 255, 255, 0.32);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 0.7em;
+
+    letter-spacing: 0.2em;
+}
+
+.order-modal-top h2 {
+    margin:
+        0.35em 0 0;
+
+    color: #fff;
+
+    font-size: 1.55em;
+
+    font-weight: normal;
+
+    letter-spacing: 0.08em;
+}
+
+
+/* =========================================================
+   MODAL ITEMS
+========================================================= */
+
+.modal-order-items {
+    padding:
+        0.8em 0;
+}
+
+.modal-order-item {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        auto
+        auto;
+
+    gap: 1.2em;
+
+    align-items: center;
+
+    padding:
+        1.1em 0;
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.07);
+}
+
+.modal-order-item:last-child {
+    border-bottom: 0;
+}
+
+.modal-order-item-main {
+    min-width: 0;
+}
+
+.modal-order-item-name {
+    color: #fff;
+
+    font-size: 0.88em;
+
+    line-height: 1.4;
+}
+
+.modal-order-item-meta {
+    margin-top: 0.4em;
+
+    color:
+        rgba(255, 255, 255, 0.36);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 0.68em;
+
+    line-height: 1.6;
+}
+
+.modal-order-item-qty {
+    color:
+        rgba(255, 255, 255, 0.46);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 0.68em;
+
+    white-space: nowrap;
+}
+
+.modal-order-item-total {
+    color:
+        rgba(255, 255, 255, 0.82);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 0.72em;
+
+    direction: rtl;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   MODAL SUMMARY
+========================================================= */
+
+.modal-divider {
+    height: 1px;
+
+    margin:
+        0.9em 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.13),
+            transparent
+        );
+}
+
+.modal-summary {
+    position: relative;
+
+    z-index: 1;
+}
+
+.modal-summary-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 1em;
+
+    margin-bottom: 0.8em;
+}
+
+.modal-summary-row span {
+    color:
+        rgba(255, 255, 255, 0.4);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 0.66em;
+
+    letter-spacing: 0.1em;
+}
+
+.modal-summary-row strong {
+    color:
+        rgba(255, 255, 255, 0.8);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 0.68em;
+
+    font-weight: normal;
+
+    direction: rtl;
+
+    white-space: nowrap;
+}
+
+.modal-total-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 1em;
+}
+
+.modal-total-row span {
+    color: #fff;
+
+    font-size: 1em;
+
+    letter-spacing: 0.13em;
+}
+
+.modal-total-row strong {
+    color: #fff;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 1.05em;
+
+    direction: rtl;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   SHIPPING INFORMATION
+========================================================= */
+
+.modal-shipping {
+    margin-top: 1.6em;
+
+    padding: 1.2em;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.09);
+
+    border-radius: 0.8em;
+
+    background:
+        rgba(255, 255, 255, 0.025);
+}
+
+.modal-block-title {
+    margin-bottom: 1em;
+
+    color:
+        rgba(255, 255, 255, 0.38);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 0.65em;
+
+    letter-spacing: 0.16em;
+}
+
+.modal-info-row {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 1.5em;
+
+    margin-bottom: 0.9em;
+}
+
+.modal-info-row:last-child {
+    margin-bottom: 0;
+}
+
+.modal-info-row span {
+    flex-shrink: 0;
+
+    color:
+        rgba(255, 255, 255, 0.3);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 0.62em;
+
+    letter-spacing: 0.08em;
+}
+
+.modal-info-row strong {
+    max-width: 78%;
+
+    color:
+        rgba(255, 255, 255, 0.76);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 0.66em;
+
+    font-weight: normal;
+
+    line-height: 1.8;
+
+    text-align: right;
+
+    direction: rtl;
+
+    overflow-wrap: anywhere;
+}
+
+.modal-created {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 1em;
+
+    margin-top: 1.2em;
+
+    color:
+        rgba(255, 255, 255, 0.3);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 0.62em;
+}
+
+
+/* =========================================================
+   OPTIONAL PAYMENT STATUS
+   Used only if added to HTML:
+   #modalPaymentStatus
+========================================================= */
+
+.modal-payment-status {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 1em;
+
+    margin-top: 1em;
+
+    padding:
+        0.8em 1em;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    border-radius: 0.6em;
+
+    background:
+        rgba(255, 255, 255, 0.02);
+}
+
+.modal-payment-status > span {
+    color:
+        rgba(255, 255, 255, 0.3);
+
+    font-size: 0.6em;
+
+    letter-spacing: 0.1em;
+}
+
+.modal-payment-status > strong {
+    color:
+        rgba(255, 255, 255, 0.7);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 0.62em;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+.order-modal-box::-webkit-scrollbar {
+    width: 6px;
+}
+
+.order-modal-box::-webkit-scrollbar-track {
+    background:
+        rgba(255, 255, 255, 0.02);
+}
+
+.order-modal-box::-webkit-scrollbar-thumb {
+    background:
+        rgba(255, 255, 255, 0.15);
+
+    border-radius: 999px;
+}
+
+.order-modal-box::-webkit-scrollbar-thumb:hover {
+    background:
+        rgba(255, 255, 255, 0.25);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 60em) {
+
+    .orders-layout {
+        grid-template-columns:
+            1fr;
+    }
+
+    .orders-sidebar {
+        position: static;
+
+        display: grid;
+
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(0, 1fr);
+
+        align-items: start;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 40em) {
+
+    .orders-page {
+        width: 94%;
+
+        padding:
+            1.5em 0 3em;
+    }
+
+
+    .orders-hero {
+        padding:
+            1.5em 0 2em;
+    }
+
+
+    .orders-title {
+        font-size:
+            3.2em !important;
+
+        letter-spacing:
+            0.05em;
+    }
+
+
+    .orders-subtitle {
+        font-size:
+            0.72em;
+    }
+
+
+    .orders-layout {
+        grid-template-columns:
+            1fr;
+
+        gap: 1em;
+    }
+
+
+    .orders-sidebar {
+        display: flex;
+
+        flex-direction: column;
+
+        position: static;
+    }
+
+
+    .orders-card-header {
+        padding:
+            1.1em;
+    }
+
+
+    .orders-list {
+        padding:
+            0 1.1em 1em;
+    }
+
+
+    /* Order */
+
+    .order-card {
+        grid-template-columns:
+            1fr;
+
+        gap: 1em;
+    }
+
+
+    .order-card-top {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 0.7em;
+    }
+
+
+    .order-card-info {
+        gap:
+            1em 1.3em;
+    }
+
+
+    .order-card-info-item {
+        min-width:
+            5.5em;
+    }
+
+
+    .order-card-action {
+        width: 100%;
+    }
+
+
+    .orders-view-button {
+        width: 100%;
+
+        min-height:
+            3em;
+    }
+
+
+    /* Status */
+
+    .order-status {
+        min-width:
+            6.5em;
+
+        font-size:
+            0.55em;
+    }
+
+
+    /* Modal */
+
+    .order-modal {
+        padding:
+            0.5em;
+    }
+
+
+    .order-modal-box {
+        width:
+            96vw;
+
+        max-height:
+            94vh;
+
+        padding:
+            1.1em;
+
+        border-radius:
+            1em;
+    }
+
+
+    .order-modal-top {
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+        padding:
+            0 2.2em 1.1em 0;
+    }
+
+
+    .order-modal-top h2 {
+        font-size:
+            1.25em;
+    }
+
+
+    .modal-order-item {
+        grid-template-columns:
+            minmax(0, 1fr)
+            auto;
+
+        gap:
+            0.7em;
+    }
+
+
+    .modal-order-item-total {
+        grid-column:
+            1 / -1;
+
+        justify-self:
+            end;
+
+        margin-top:
+            -0.2em;
+
+        font-size:
+            0.65em;
+    }
+
+
+    .modal-order-item-qty {
+        justify-self:
+            end;
+    }
+
+
+    .modal-info-row {
+        flex-direction:
+            column;
+
+        gap:
+            0.3em;
+    }
+
+
+    .modal-info-row strong {
+        max-width:
+            100%;
+
+        text-align:
+            left;
+    }
+
+
+    .modal-created {
+        flex-direction:
+            column;
+
+        gap:
+            0.4em;
+    }
+
+}
+
+
+/* =========================================================
+   EXTRA SMALL
+========================================================= */
+
+@media (max-width: 28em) {
+
+    .orders-title {
+        font-size:
+            2.6em !important;
+    }
+
+
+    .orders-card-header {
+        gap:
+            0.7em;
+    }
+
+
+    .orders-section-number {
+        width:
+            2em;
+
+        height:
+            2em;
+    }
+
+
+    .orders-card-header h2 {
+        font-size:
+            0.95em;
+    }
+
+
+    .order-card-number {
+        font-size:
+            0.78em;
+    }
+
+
+    .order-card-info {
+        display: grid;
+
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .order-card-info-item {
+        min-width: 0;
+    }
+
+
+    .modal-total-row strong {
+        font-size:
+            0.9em;
+    }
+
+}

@@ -1,0 +1,61 @@
+* { box-sizing: border-box; }
+body { min-height: 100vh; color:#fff; background:#050505; }
+.payment-page { position:relative; z-index:1; width:min(1120px,92%); margin:0 auto; padding:150px 0 90px; }
+.payment-hero { text-align:center; margin-bottom:42px; }
+.payment-kicker { display:inline-block; color:rgba(255,255,255,.4); font:600 .68rem/1 Arial,sans-serif; letter-spacing:.18em; }
+.payment-kicker strong { color:#fff; }
+.payment-hero h1 { margin:12px 0 10px; font:normal clamp(2rem,5vw,4rem)/1 "Metal Mania",cursive; letter-spacing:.08em; }
+.payment-hero p { max-width:620px; margin:0 auto; color:rgba(255,255,255,.55); font:400 .9rem/2 Vazirmatn,Arial,sans-serif; }
+.payment-layout { display:grid; grid-template-columns:minmax(0,1.65fr) minmax(280px,.75fr); gap:22px; align-items:start; }
+.payment-main,.payment-side { min-width:0; }
+.payment-card { border:1px solid rgba(255,255,255,.12); border-radius:18px; background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.015)); box-shadow:0 20px 50px rgba(0,0,0,.35),inset 0 1px rgba(255,255,255,.04); }
+.payment-steps { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-bottom:18px; }
+.payment-step { display:flex; gap:11px; padding:15px; border:1px solid rgba(255,255,255,.08); border-radius:13px; background:rgba(255,255,255,.025); }
+.payment-step span { color:rgba(255,255,255,.32); font:700 .65rem/1 Arial,sans-serif; }
+.payment-step strong { display:block; font:600 .75rem/1.5 Vazirmatn,Arial,sans-serif; }
+.payment-step small { display:block; margin-top:4px; color:rgba(255,255,255,.4); font:400 .62rem/1.5 Vazirmatn,Arial,sans-serif; }
+.payment-card-heading { display:flex; align-items:center; gap:13px; padding:22px 22px 14px; }
+.payment-card-heading > span:first-child { color:rgba(255,255,255,.35); font:600 .58rem/1 Arial,sans-serif; letter-spacing:.13em; }
+.payment-card-heading h2 { margin:5px 0 0; font:normal 1.35rem/1.2 "Metal Mania",cursive; }
+.payment-icon { width:39px; height:39px; display:grid; place-items:center; flex:none; border:1px solid rgba(255,255,255,.12); border-radius:11px; color:#fff; background:rgba(255,255,255,.05); font:700 1rem Arial,sans-serif; }
+.payment-details { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; padding:0 22px; }
+.payment-detail-row { padding:14px 15px; border:1px solid rgba(255,255,255,.08); border-radius:11px; background:rgba(0,0,0,.28); }
+.payment-detail-row span { display:block; color:rgba(255,255,255,.35); font:600 .58rem/1 Arial,sans-serif; letter-spacing:.08em; margin-bottom:7px; }
+.payment-detail-row strong { display:block; color:#fff; direction:ltr; text-align:left; overflow-wrap:anywhere; font:700 .8rem/1.6 Arial,sans-serif; }
+.payment-amount-box { display:flex; align-items:center; justify-content:space-between; gap:15px; margin:14px 22px 0; padding:17px; border:1px solid rgba(255,255,255,.16); border-radius:12px; background:rgba(255,255,255,.045); }
+.payment-amount-box span { color:rgba(255,255,255,.48); font:500 .7rem/1.5 Vazirmatn,Arial,sans-serif; }
+.payment-amount-box strong { color:#fff; font:800 1.05rem/1.5 Vazirmatn,Arial,sans-serif; }
+.payment-warning { margin:10px 22px 22px; padding:11px 13px; border-right:2px solid rgba(255,255,255,.2); color:rgba(255,255,255,.4); font:400 .65rem/1.8 Vazirmatn,Arial,sans-serif; }
+.payment-receipt-card { margin-top:18px; padding-bottom:22px; }
+.receipt-drop { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; min-height:190px; margin:0 22px; padding:25px; border:1px dashed rgba(255,255,255,.2); border-radius:13px; background:rgba(0,0,0,.2); cursor:pointer; text-align:center; transition:.2s ease; }
+.receipt-drop:hover { border-color:rgba(255,255,255,.42); background:rgba(255,255,255,.025); }
+.receipt-drop input { display:none; }
+.receipt-drop-icon { width:46px; height:46px; display:grid; place-items:center; border:1px solid rgba(255,255,255,.14); border-radius:50%; font:700 1.2rem Arial,sans-serif; }
+.receipt-drop strong { font:600 .78rem/1.5 Vazirmatn,Arial,sans-serif; }
+.receipt-drop small { color:rgba(255,255,255,.35); font:400 .6rem/1.5 Arial,sans-serif; }
+.receipt-preview { display:flex; align-items:center; gap:12px; margin:12px 22px 0; padding:9px; border:1px solid rgba(255,255,255,.08); border-radius:10px; background:rgba(0,0,0,.25); }
+.receipt-preview img { width:60px; height:60px; object-fit:cover; border-radius:7px; }
+.receipt-preview span { color:rgba(255,255,255,.55); direction:ltr; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font:400 .65rem Arial,sans-serif; }
+.payment-submit-btn { display:flex; align-items:center; justify-content:space-between; width:calc(100% - 44px); min-height:52px; margin:14px 22px 0; padding:0 18px; border:1px solid rgba(255,255,255,.25); border-radius:11px; background:#fff; color:#000; cursor:pointer; font:700 .73rem/1 Vazirmatn,Arial,sans-serif; transition:.2s ease; }
+.payment-submit-btn:hover:not(:disabled) { transform:translateY(-2px); box-shadow:0 10px 25px rgba(255,255,255,.1); }
+.payment-submit-btn:disabled { opacity:.35; cursor:not-allowed; }
+.payment-status { margin:12px 22px 0; padding:11px 13px; border-radius:10px; font:400 .65rem/1.8 Vazirmatn,Arial,sans-serif; }
+.payment-status.info { color:rgba(255,255,255,.45); background:rgba(255,255,255,.03); }
+.payment-status.success { color:#a7ffbd; background:rgba(100,255,140,.05); border:1px solid rgba(100,255,140,.12); }
+.payment-status.error { color:#ff9d9d; background:rgba(255,80,80,.05); border:1px solid rgba(255,80,80,.12); }
+.order-summary-card { padding-bottom:18px; }
+.order-summary-card .payment-card-heading { display:block; padding-bottom:18px; }
+.summary-line { display:flex; justify-content:space-between; gap:12px; padding:13px 20px; border-top:1px solid rgba(255,255,255,.07); font:400 .68rem/1.6 Vazirmatn,Arial,sans-serif; }
+.summary-line span { color:rgba(255,255,255,.38); }
+.summary-line strong { color:#fff; }
+.payment-text-link { display:block; margin:12px 20px 0; color:rgba(255,255,255,.55); text-decoration:none; font:500 .65rem/1.8 Vazirmatn,Arial,sans-serif; }
+.payment-text-link:hover { color:#fff; }
+.payment-note { margin-top:14px; padding:17px; border:1px solid rgba(255,255,255,.08); border-radius:14px; background:rgba(255,255,255,.02); }
+.payment-note strong { font:700 .7rem/1.5 Vazirmatn,Arial,sans-serif; }
+.payment-note p { margin:6px 0 0; color:rgba(255,255,255,.4); font:400 .63rem/1.9 Vazirmatn,Arial,sans-serif; }
+.payment-state { padding:50px 20px; text-align:center; color:rgba(255,255,255,.5); font:400 .8rem/1.8 Vazirmatn,Arial,sans-serif; }
+.payment-state-error h2 { margin:0 0 8px; color:#fff; font:normal 1.5rem "Metal Mania",cursive; }
+.payment-state-error p { margin:0 0 18px; }
+.payment-outline-btn { display:inline-block; padding:11px 17px; border:1px solid rgba(255,255,255,.18); border-radius:9px; color:#fff; text-decoration:none; font:600 .65rem Vazirmatn,Arial,sans-serif; }
+.payment-empty { grid-column:1/-1; padding:18px; color:rgba(255,255,255,.4); text-align:center; font:400 .7rem Vazirmatn,Arial,sans-serif; }
+@media(max-width:800px){ .payment-page{padding-top:125px}.payment-layout{grid-template-columns:1fr}.payment-side{order:-1}.payment-steps{grid-template-columns:1fr}.payment-details{grid-template-columns:1fr}.payment-card-heading{padding:18px}.payment-details,.receipt-drop{margin-left:18px;margin-right:18px}.payment-amount-box{margin-left:18px;margin-right:18px}.payment-warning{margin-left:18px;margin-right:18px}.payment-submit-btn{width:calc(100% - 36px);margin-left:18px;margin-right:18px}.payment-status{margin-left:18px;margin-right:18px} }

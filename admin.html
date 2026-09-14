@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel | NICHERZ</title>
+    <link rel="stylesheet" href="style-shop.css">
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="admin-products.css">
+    <link rel="stylesheet" href="admin-payment.css">
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="./Images/logo.webp">
+</head>
+
+<body>
+    <div class="smoke-background" aria-hidden="true">
+        <div class="smoke smoke-one"></div>
+        <div class="smoke smoke-two"></div>
+        <div class="smoke smoke-three"></div>
+    </div>
+
+    <body>
+        <div class="smoke-background" aria-hidden="true">
+            <div class="smoke smoke-one"></div>
+            <div class="smoke smoke-two"></div>
+            <div class="smoke smoke-three"></div>
+        </div>
+        <header class="shop-header">
+            <div class="shop-header-inner">
+                <div class="brand-wrap">
+                    <div class="brand-mark"><img src="./Images/logo.webp" alt="NICHERZ logo" class="footer-logo"></div>
+                    <div class="brand-copy"><span class="brand-name">NICHERZ</span><small>ADMIN</small></div>
+                </div>
+                <nav class="header-nav"><a href="/">HOME</a><a href="/shop">SHOP</a><a
+                        href="/orders">ORDERS</a><a href="/account">ACCOUNT</a></nav>
+                <div class="header-actions"><button id="adminLogoutBtn" type="button"
+                        class="admin-header-button">LOGOUT</button></div>
+            </div>
+        </header>
+        <main class="admin-page">
+            <section class="admin-hero">
+                <h1 class="admin-title">ADMIN PANEL</h1>
+                <p class="admin-subtitle">NICHERZ MANAGEMENT</p>
+            </section>
+            <section id="adminError" class="admin-error" hidden>
+                <div class="admin-error-icon">!</div>
+                <h2>ACCESS DENIED</h2>
+                <p id="adminErrorText">You do not have permission to access this page.</p><a href="/shop"
+                    class="admin-action-button">RETURN TO SHOP</a>
+            </section>
+            <section id="adminContent" class="admin-content">
+                <section class="admin-stats">
+                    <div class="admin-stat-card"><span class="admin-stat-label">TOTAL ORDERS</span><strong
+                            id="totalOrders" class="admin-stat-value">0</strong></div>
+                    <div class="admin-stat-card"><span class="admin-stat-label">PENDING</span><strong id="pendingOrders"
+                            class="admin-stat-value">0</strong></div>
+                    <div class="admin-stat-card"><span class="admin-stat-label">PROCESSING</span><strong
+                            id="processingOrders" class="admin-stat-value">0</strong></div>
+                    <div class="admin-stat-card"><span class="admin-stat-label">DELIVERED</span><strong
+                            id="deliveredOrders" class="admin-stat-value">0</strong></div>
+                </section>
+                <section class="admin-card">
+                    <div class="admin-card-header">
+                        <div class="admin-section-number">01</div>
+                        <div>
+                            <h2>ORDER MANAGEMENT</h2>
+                            <p>MANAGE CUSTOMER ORDERS</p>
+                        </div><button id="refreshOrdersBtn" type="button" class="refresh-button">↻ REFRESH</button>
+                    </div>
+                    <div class="admin-toolbar">
+                        <div class="admin-filter"><label for="statusFilter">STATUS</label><select id="statusFilter">
+                                <option value="all">ALL ORDERS</option>
+                                <option value="pending">PENDING</option>
+                                <option value="confirmed">CONFIRMED</option>
+                                <option value="processing">PROCESSING</option>
+                                <option value="shipped">SHIPPED</option>
+                                <option value="delivered">DELIVERED</option>
+                                <option value="cancelled">CANCELLED</option>
+                            </select></div>
+                        <div class="admin-order-count"><span id="visibleOrderCount">0</span> ORDERS</div>
+                    </div>
+                    <div id="adminOrdersList" class="admin-orders-list"></div>
+                    <div id="adminOrdersEmpty" class="admin-orders-empty" hidden>
+                        <div class="admin-empty-icon">—</div>
+                        <h3>NO ORDERS FOUND</h3>
+                        <p>There are no orders matching this filter.</p>
+                    </div>
+                </section>
+            </section>
+        </main>
+        <div id="adminOrderModal" class="admin-modal" hidden>
+            <div class="admin-modal-backdrop" data-close-admin-modal></div>
+            <div class="admin-modal-box"><button id="closeAdminModal" type="button" class="admin-modal-close">×</button>
+                <div class="admin-modal-header">
+                    <div>
+                        <div class="admin-modal-label">ORDER DETAILS</div>
+                        <h2 id="adminModalOrderTitle">ORDER #—</h2>
+                    </div><span id="adminModalStatus" class="admin-status">PENDING</span>
+                </div>
+                <section class="admin-detail-section">
+                    <div class="admin-detail-title">CUSTOMER</div>
+                    <div class="admin-detail-grid">
+                        <div class="admin-detail-box"><span>NAME</span><strong id="adminCustomerName">—</strong></div>
+                        <div class="admin-detail-box"><span>PHONE</span><strong id="adminCustomerPhone">—</strong></div>
+                        <div class="admin-detail-box admin-detail-full"><span>ADDRESS</span><strong
+                                id="adminCustomerAddress">—</strong></div>
+                    </div>
+                </section>
+                <section class="admin-detail-section">
+                    <div class="admin-detail-title">ORDER ITEMS</div>
+                    <div id="adminModalItems" class="admin-modal-items"></div>
+                </section>
+                <section class="admin-detail-section">
+                    <div class="admin-detail-title">ORDER SUMMARY</div>
+                    <div class="admin-detail-grid">
+                        <div class="admin-detail-box"><span>SUBTOTAL</span><strong id="adminModalSubtotal">۰
+                                تومان</strong></div>
+                        <div class="admin-detail-box"><span>SHIPPING</span><strong id="adminModalShipping">۰
+                                تومان</strong></div>
+                        <div class="admin-detail-box"><span>TAX</span><strong id="adminModalTax">۰ تومان</strong></div>
+                        <div class="admin-detail-box"><span>DISCOUNT</span><strong id="adminModalDiscount">۰
+                                تومان</strong></div>
+                        <div class="admin-detail-box admin-detail-full"><span>TOTAL</span><strong id="adminModalTotal">۰
+                                تومان</strong></div>
+                        <div class="admin-detail-box"><span>CREATED AT</span><strong id="adminModalCreatedAt">—</strong>
+                        </div>
+                    </div>
+                </section>
+                <section class="admin-detail-section admin-status-section">
+                    <div class="admin-detail-title">UPDATE STATUS</div>
+                    <div class="admin-detail-group"><label for="adminStatusSelect">STATUS</label><select
+                            id="adminStatusSelect">
+                            <option value="pending">PENDING</option>
+                            <option value="confirmed">CONFIRMED</option>
+                            <option value="processing">PROCESSING</option>
+                            <option value="shipped">SHIPPED</option>
+                            <option value="delivered">DELIVERED</option>
+                            <option value="cancelled">CANCELLED</option>
+                        </select></div>
+                    <div id="adminSuccessModal" class="admin-modal" hidden>
+                        <div class="admin-modal-backdrop" data-close-success></div>
+                        <div class="admin-modal-box"><button id="closeAdminSuccessModal" type="button"
+                                class="admin-modal-close">×</button>
+                            <div class="admin-modal-header">
+                                <div>
+                                    <div class="admin-modal-label">SUCCESS</div>
+                                    <h2 id="adminSuccessTitle">Order Updated Successfully</h2>
+                                </div><span id="adminSuccessMessage">Your order has been updated successfully.</span>
+                            </div><button id="adminSuccessOk" type="button" class="admin-success-button">متوجه
+                                شدم</button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        </div>
+        <script type="module" src="admin.js"></script>
+        <script type="module" src="admin-products.js"></script>
+    </body>
+
+</html>
