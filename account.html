@@ -1,15 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>My Account | NICHERZ</title>
-    <link rel="stylesheet" href="style-shop.css"><link rel="stylesheet" href="account.css"><link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet"><link rel="icon" type="image/jpeg" href="./Images/logo.webp">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account | NICHERZ</title>
+    <link rel="stylesheet" href="style-shop.css">
+    <link rel="stylesheet" href="account.css">
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="./Images/logo.webp">
 </head>
+
 <body>
-    <div class="smoke-background" aria-hidden="true"><div class="smoke smoke-one"></div><div class="smoke smoke-two"></div><div class="smoke smoke-three"></div></div>
-    <header class="shop-header"><div class="shop-header-inner"><a href="/" class="brand-wrap" aria-label="NICHERZ home"><div class="brand-mark"><img src="./Images/logo.webp" alt="NICHERZ logo"></div><div class="brand-copy"><span class="brand-name">NICHERZ</span><small>ARCHIVE</small></div></a><nav class="header-nav" aria-label="Main navigation"><a href="/">HOME</a><a href="/shop">PRODUCT</a><a href="/#gallery">GALLERY</a><a href="/account">ACCOUNT</a><a href="/login">LOGIN</a></nav><div class="header-actions"><a href="/cart" class="cart-pill">CART <span id="accountCartCount">(0)</span></a></div></div></header>
-    <main class="account-page"><section class="account-hero"><h1 class="account-title">MY ACCOUNT</h1><p class="account-subtitle">YOUR NICHERZ PROFILE</p></section><section id="accountError" class="account-error" hidden><div class="account-error-icon">!</div><h2>SOMETHING WENT WRONG</h2><p id="accountErrorText">Unable to load your account.</p><button type="button" id="accountRetryBtn" class="account-action-button">TRY AGAIN</button></section><section id="accountContent" class="account-container" hidden><div class="account-main"><section class="account-card"><div class="account-card-header"><div class="account-section-number">01</div><div><h2>PROFILE</h2><p>PERSONAL INFORMATION</p></div></div><form id="profileForm" class="profile-form" novalidate><div class="account-field"><label>EMAIL</label><input id="accountEmail" type="email" readonly><small>ایمیل حساب قابل تغییر نیست.</small></div><div class="account-field"><label for="fullName">FULL NAME</label><input id="fullName" name="fullName" type="text" autocomplete="name" maxlength="120" placeholder="نام و نام خانوادگی"></div><div class="account-field"><label for="phone">PHONE NUMBER</label><input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="30" placeholder="09xxxxxxxxx"></div><div class="account-field"><label for="address">ADDRESS</label><textarea id="address" name="address" autocomplete="street-address" maxlength="500" rows="5" placeholder="آدرس کامل"></textarea></div><button id="saveProfileBtn" class="account-save-button" type="submit"><span class="save-text">SAVE CHANGES</span><span class="save-arrow">→</span></button></form></section></div></section></main>
-    <div id="successModal" class="account-modal" hidden><div class="account-modal-backdrop" data-close-success></div><div class="account-modal-box"><div class="account-modal-icon">✓</div><div class="account-modal-label">PROFILE UPDATED</div><h2>اطلاعات ذخیره شد</h2><p>اطلاعات پروفایل شما با موفقیت به‌روزرسانی شد.</p><button id="successModalOk" type="button" class="account-modal-button">متوجه شدم</button></div></div>
-    <div id="profileErrorModal" class="account-modal" hidden><div class="account-modal-backdrop" data-close-profile-error></div><div class="account-modal-box"><button id="closeProfileErrorModal" type="button" class="account-modal-close">×</button><div class="account-modal-icon">!</div><div class="account-modal-label">PROFILE ERROR</div><h2>عملیات انجام نشد</h2><p id="profileErrorText">خطایی رخ داده است.</p><button id="profileErrorOk" type="button" class="account-modal-button">متوجه شدم</button></div></div>
-    <footer class="shop-footer"><div class="footer-grid"><div class="footer-brand"><span class="footer-logo">N</span><div><h3>NICHERZ</h3><p>Curated chaos for the loudest souls.</p></div></div><div class="footer-links"><h4>INFO</h4><a href="/contact">Contact</a><a href="#">Support</a></div><div class="footer-links"><h4>FOLLOW</h4><a href="https://instagram.com/nicherzz" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://t.me/nicherz" target="_blank" rel="noopener noreferrer">Telegram</a></div></div><div class="footer-bottom"><span>© 2026 NICHERZ</span><span>WEAR THE LEGEND</span></div></footer>
-    <script type="module" src="account.js"></script><script type="module" src="header-auth.js"></script>
-</body></html>
+    <div class="smoke-background" aria-hidden="true">
+        <div class="smoke smoke-one"></div>
+        <div class="smoke smoke-two"></div>
+        <div class="smoke smoke-three"></div>
+    </div>
+    <header class="shop-header">
+        <div class="shop-header-inner"><a href="/" class="brand-wrap" aria-label="NICHERZ home">
+                <div class="brand-mark"><img src="./Images/logo.webp" alt="NICHERZ logo"></div>
+                <div class="brand-copy"><span class="brand-name">NICHERZ</span><small>ARCHIVE</small></div>
+            </a>
+            <nav class="header-nav" aria-label="Main navigation"><a href="/">HOME</a><a href="/shop">PRODUCT</a><a
+                    href="/#gallery">GALLERY</a><a href="/account">ACCOUNT</a><a href="/login">LOGIN</a></nav>
+            <div class="header-actions"><a href="/cart" class="cart-pill">CART <span
+                        id="accountCartCount">(0)</span></a></div>
+        </div>
+    </header>
+    <main class="account-page">
+        <section class="account-hero">
+            <h1 class="account-title">MY ACCOUNT</h1>
+            <p class="account-subtitle">YOUR NICHERZ PROFILE</p>
+        </section>
+        <section id="accountError" class="account-error" hidden>
+            <div class="account-error-icon">!</div>
+            <h2>SOMETHING WENT WRONG</h2>
+            <p id="accountErrorText">Unable to load your account.</p><button type="button" id="accountRetryBtn"
+                class="account-action-button">TRY AGAIN</button>
+        </section>
+        <section id="accountContent" class="account-container" hidden>
+            <div class="account-main">
+                <section class="account-card">
+                    <div class="account-card-header">
+                        <div class="account-section-number">01</div>
+                        <div>
+                            <h2>PROFILE</h2>
+                            <p>PERSONAL INFORMATION</p>
+                        </div>
+                    </div>
+                    <form id="profileForm" class="profile-form" novalidate>
+                        <div class="account-field"><label>EMAIL</label><input id="accountEmail" type="email"
+                                readonly><small>ایمیل حساب قابل تغییر نیست.</small></div>
+                        <div class="account-field"><label for="fullName">FULL NAME</label><input id="fullName"
+                                name="fullName" type="text" autocomplete="name" maxlength="120"
+                                placeholder="نام و نام خانوادگی"></div>
+                        <div class="account-field"><label for="phone">PHONE NUMBER</label><input id="phone" name="phone"
+                                type="tel" autocomplete="tel" maxlength="30" placeholder="09xxxxxxxxx"></div>
+                        <div class="account-field"><label for="address">ADDRESS</label><textarea id="address"
+                                name="address" autocomplete="street-address" maxlength="500" rows="5"
+                                placeholder="آدرس کامل"></textarea></div><button id="saveProfileBtn"
+                            class="account-save-button" type="submit"><span class="save-text">SAVE CHANGES</span><span
+                                class="save-arrow">→</span></button>
+                    </form>
+                </section>
+            </div>
+        </section>
+    </main>
+    <div id="successModal" class="account-modal" hidden>
+        <div class="account-modal-backdrop" data-close-success></div>
+        <div class="account-modal-box">
+            <div class="account-modal-icon">✓</div>
+            <div class="account-modal-label">PROFILE UPDATED</div>
+            <h2>اطلاعات ذخیره شد</h2>
+            <p>اطلاعات پروفایل شما با موفقیت به‌روزرسانی شد.</p><button id="successModalOk" type="button"
+                class="account-modal-button">متوجه شدم</button>
+        </div>
+    </div>
+    <div id="profileErrorModal" class="account-modal" hidden>
+        <div class="account-modal-backdrop" data-close-profile-error></div>
+        <div class="account-modal-box"><button id="closeProfileErrorModal" type="button"
+                class="account-modal-close">×</button>
+            <div class="account-modal-icon">!</div>
+            <div class="account-modal-label">PROFILE ERROR</div>
+            <h2>عملیات انجام نشد</h2>
+            <p id="profileErrorText">خطایی رخ داده است.</p><button id="profileErrorOk" type="button"
+                class="account-modal-button">متوجه شدم</button>
+        </div>
+    </div>
+    <footer class="shop-footer">
+        <div class="footer-grid">
+            <div class="footer-brand"><span class="footer-logo">N</span>
+                <div>
+                    <h3>NICHERZ</h3>
+                    <p>Curated chaos for the loudest souls.</p>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>INFO</h4><a href="/contact">Contact</a><a href="#">Support</a>
+            </div>
+            <div class="footer-links">
+                <h4>FOLLOW</h4><a href="https://instagram.com/nicherzz" target="_blank"
+                    rel="noopener noreferrer">Instagram</a><a href="https://t.me/nicherz" target="_blank"
+                    rel="noopener noreferrer">Telegram</a>
+            </div>
+        </div>
+        <div class="footer-bottom"><span>© 2026 NICHERZ</span><span>WEAR THE LEGEND</span></div>
+    </footer>
+    <script type="module" src="account.js"></script>
+    <script type="module" src="header-auth.js"></script>
+</body>
+
+</html>

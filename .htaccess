@@ -1,35 +1,59 @@
 RewriteEngine On
 
-# Redirect legacy .html URLs to their clean equivalents
-RewriteRule ^index-shop\.html$ /shop [R=301,L,QSA]
-RewriteRule ^cart\.html$ /cart [R=301,L,QSA]
-RewriteRule ^checkout\.html$ /checkout [R=301,L,QSA]
-RewriteRule ^payment\.html$ /payment [R=301,L,QSA]
-RewriteRule ^orders\.html$ /orders [R=301,L,QSA]
-RewriteRule ^account\.html$ /account [R=301,L,QSA]
-RewriteRule ^login\.html$ /login [R=301,L,QSA]
-RewriteRule ^register\.html$ /register [R=301,L,QSA]
-RewriteRule ^contact\.html$ /contact [R=301,L,QSA]
-RewriteRule ^admin\.html$ /admin [R=301,L,QSA]
-RewriteRule ^product-detail\.html$ /product [R=301,L,QSA]
-RewriteRule ^index\.html$ / [R=301,L,QSA]
+# =========================================================
+# Redirect old .html URLs to clean URLs
+# =========================================================
 
-# Never rewrite real files/directories
+RewriteRule ^index-shop\.html$ /shop [R=301,L]
+RewriteRule ^cart\.html$ /cart [R=301,L]
+RewriteRule ^checkout\.html$ /checkout [R=301,L]
+RewriteRule ^payment\.html$ /payment [R=301,L]
+RewriteRule ^orders\.html$ /orders [R=301,L]
+RewriteRule ^account\.html$ /account [R=301,L]
+RewriteRule ^login\.html$ /login [R=301,L]
+RewriteRule ^register\.html$ /register [R=301,L]
+RewriteRule ^contact\.html$ /contact [R=301,L]
+RewriteRule ^admin\.html$ /admin [R=301,L]
+RewriteRule ^product-detail\.html$ /product [R=301,L]
+
+# Password recovery pages
+RewriteRule ^recovery\.html$ /recovery [R=301,L]
+RewriteRule ^reset-password\.html$ /reset-password [R=301,L]
+
+# Homepage
+RewriteRule ^index\.html$ / [R=301,L]
+
+
+# =========================================================
+# Never rewrite real files or directories
+# =========================================================
+
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 
+
+# =========================================================
 # Clean public routes
+# =========================================================
+
 RewriteRule ^$ index.html [L]
 RewriteRule ^home/?$ index.html [L]
+
 RewriteRule ^shop/?$ index-shop.html [L,QSA]
 RewriteRule ^cart/?$ cart.html [L]
 RewriteRule ^checkout/?$ checkout.html [L]
 RewriteRule ^payment/?$ payment.html [L]
 RewriteRule ^orders/?$ orders.html [L]
 RewriteRule ^account/?$ account.html [L]
-RewriteRule ^login/?$ login.html [L,QSA]
-RewriteRule ^register/?$ register.html [L,QSA]
+
+RewriteRule ^login/?$ login.html [L]
+RewriteRule ^register/?$ register.html [L]
 RewriteRule ^contact/?$ contact.html [L]
 RewriteRule ^admin/?$ admin.html [L]
+
 RewriteRule ^product/?$ product-detail.html [L,QSA]
+
+# Password recovery
+RewriteRule ^recovery/?$ recovery.html [L]
+RewriteRule ^reset-password/?$ reset-password.html [L]
