@@ -1,0 +1,71 @@
+/* NICHERZ UI/UX overrides
+   Add this stylesheet AFTER the page's existing stylesheet(s).
+   This file is intentionally additive: it does not rename IDs/classes,
+   change routes, or replace existing JS/backend hooks.
+*/
+:root {
+  --ui-bg: #070707;
+  --ui-surface: #101010;
+  --ui-surface-2: #161616;
+  --ui-border: rgba(255,255,255,.10);
+  --ui-border-strong: rgba(255,255,255,.18);
+  --ui-text: #f5f5f5;
+  --ui-muted: #a5a5a5;
+  --ui-accent: #e10600;
+  --ui-accent-hover: #ff1710;
+  --ui-radius: 12px;
+  --ui-radius-sm: 8px;
+  --ui-content: 1180px;
+  --ui-shadow: 0 12px 35px rgba(0,0,0,.28);
+}
+:where(a, button, input, select, textarea):focus-visible { outline: 2px solid var(--ui-accent); outline-offset: 3px; }
+:where(button, .btn, input[type="submit"], input[type="button"]) { min-height: 42px; transition: transform .18s ease, background-color .18s ease, border-color .18s ease, box-shadow .18s ease, opacity .18s ease; }
+:where(button, .btn, input[type="submit"], input[type="button"]):hover { transform: translateY(-1px); }
+:where(input, select, textarea) { border-radius: var(--ui-radius-sm); transition: border-color .18s ease, box-shadow .18s ease, background-color .18s ease; }
+:where(input, select, textarea):hover { border-color: var(--ui-border-strong); }
+:where(input, select, textarea):focus { border-color: rgba(225,6,0,.65); box-shadow: 0 0 0 3px rgba(225,6,0,.12); }
+:where(.shop-main,.cart-main,.checkout-main,.account-main,.contact-main,.payment-main,.orders-main,.product-detail-main,.admin-main) { width: min(100% - 32px, var(--ui-content)); margin-inline: auto; }
+.shop-header-inner { width: min(100% - 28px, var(--ui-content)); margin-inline: auto; }
+.header-actions { gap: 10px; }
+.header-nav { gap: 8px; }
+.header-nav a { border-radius: 8px; transition: background-color .18s ease, color .18s ease, transform .18s ease; }
+.header-nav a:hover { background: rgba(255,255,255,.07); }
+#cartHeaderCount { min-width: 20px; min-height: 20px; padding: 2px 6px; border-radius: 999px; display: inline-flex; align-items: center; justify-content: center; line-height: 1; }
+.category-btn { min-height: 42px; border-radius: 999px; white-space: nowrap; transition: background-color .18s ease, border-color .18s ease, color .18s ease, transform .18s ease; }
+.category-btn:hover { transform: translateY(-1px); }
+#products-container { align-items: stretch; }
+#products-container > * { min-width: 0; }
+:where(.product-card, .product, .card) { overflow: hidden; border-radius: var(--ui-radius); transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease; }
+:where(.product-card, .product, .card):hover { transform: translateY(-3px); box-shadow: var(--ui-shadow); }
+:where(#checkoutForm,.checkout-form,.contact-form,.account-form,.auth-form) { width: 100%; }
+:where(#checkoutForm input,#checkoutForm select,#checkoutForm textarea,.checkout-form input,.checkout-form select,.checkout-form textarea) { width: 100%; min-height: 44px; box-sizing: border-box; }
+#cartItemsContainer { width: 100%; }
+:where(#cartItemsContainer > *,#checkoutItems > *,.order-card,.summary-card,.cart-summary) { border-radius: var(--ui-radius); }
+:where(#productImage,#productName,#productDescription,#productPrice,#productStock,#sizeOptions,#qtyInput) { box-sizing: border-box; }
+#qtyInput { min-height: 42px; text-align: center; }
+:where(#adminContent,#adminOrdersList,.admin-card,.admin-panel) { min-width: 0; }
+:where(#adminOrderModal,.admin-modal,.modal) { max-width: min(92vw, 760px); }
+:where(#adminOrderModal > *, .admin-modal > *, .modal > *) { min-width: 0; }
+:where(.order-id,.product-name,.product-title,.email,.address,.description) { overflow-wrap: anywhere; }
+footer { margin-top: 48px; }
+footer a { transition: color .18s ease, opacity .18s ease; }
+@media (max-width: 760px) {
+  .shop-header-inner { width: min(100% - 20px, var(--ui-content)); }
+  .header-actions { flex-wrap: wrap; }
+  .header-nav { width: 100%; justify-content: center; overflow-x: auto; scrollbar-width: none; padding-bottom: 3px; }
+  .header-nav::-webkit-scrollbar { display: none; }
+  .header-nav a { flex: 0 0 auto; }
+  :where(.shop-main,.cart-main,.checkout-main,.account-main,.contact-main,.payment-main,.orders-main,.product-detail-main,.admin-main) { width: min(100% - 20px, var(--ui-content)); }
+  .category-btn { flex: 0 0 auto; }
+  :where(#checkoutForm,.checkout-form,.contact-form,.account-form,.auth-form) { grid-template-columns: 1fr !important; }
+  :where(#adminOrderModal,.admin-modal,.modal) { width: min(94vw, 760px); max-height: 90dvh; overflow-y: auto; }
+}
+@media (max-width: 480px) {
+  :where(button,.btn,input[type="submit"],input[type="button"]) { min-height: 44px; }
+  :where(input,select,textarea) { font-size: 16px; }
+  .header-actions { gap: 7px; }
+  footer { margin-top: 36px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+}

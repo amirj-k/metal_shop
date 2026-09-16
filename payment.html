@@ -10,24 +10,16 @@
     <link rel="stylesheet" href="style-shop.css">
     <link rel="stylesheet" href="payment.css">
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap"
-        rel="stylesheet"
-    >
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
 
-    <link
-        rel="icon"
-        type="image/jpeg"
-        href="./Images/logo.webp"
-    >
+    <link rel="icon" type="image/jpeg" href="./Images/logo.webp">
+    <link rel="stylesheet" href="ui-ux-overrides.css">
+
 </head>
 
 <body>
 
-    <div
-        class="smoke-background"
-        aria-hidden="true"
-    >
+    <div class="smoke-background" aria-hidden="true">
         <div class="smoke smoke-one"></div>
         <div class="smoke smoke-two"></div>
         <div class="smoke smoke-three"></div>
@@ -45,11 +37,7 @@
             <div class="brand-wrap">
 
                 <div class="brand-mark">
-                    <img
-                        src="./Images/logo.webp"
-                        alt="NICHERZ logo"
-                        class="footer-logo"
-                    >
+                    <img src="./Images/logo.webp" alt="NICHERZ logo" class="footer-logo">
                 </div>
 
                 <div class="brand-copy">
@@ -65,10 +53,7 @@
             </div>
 
 
-            <nav
-                class="header-nav"
-                aria-label="Main navigation"
-            >
+            <nav class="header-nav" aria-label="Main navigation">
 
                 <a href="/">
                     HOME
@@ -95,10 +80,7 @@
 
             <div class="header-actions">
 
-                <a
-                    href="/cart"
-                    class="cart-pill"
-                >
+                <a href="/cart" class="cart-pill">
                     CART
 
                     <span id="cartHeaderCount">
@@ -153,10 +135,7 @@
              LOADING
         ================================================== -->
 
-        <section
-            id="paymentLoading"
-            class="payment-state"
-        >
+        <section id="paymentLoading" class="payment-state">
             در حال بارگذاری اطلاعات پرداخت...
         </section>
 
@@ -165,11 +144,7 @@
              ERROR
         ================================================== -->
 
-        <section
-            id="paymentError"
-            class="payment-state payment-state-error"
-            hidden
-        >
+        <section id="paymentError" class="payment-state payment-state-error" hidden>
 
             <h2>
                 پرداخت پیدا نشد
@@ -179,10 +154,7 @@
                 اطلاعات پرداخت قابل دریافت نیست.
             </p>
 
-            <a
-                href="/orders"
-                class="payment-outline-btn"
-            >
+            <a href="/orders" class="payment-outline-btn">
                 مشاهده سفارش‌ها
             </a>
 
@@ -193,11 +165,7 @@
              PAYMENT CONTENT
         ================================================== -->
 
-        <section
-            id="paymentContent"
-            class="payment-layout"
-            hidden
-        >
+        <section id="paymentContent" class="payment-layout" hidden>
 
             <div class="payment-main">
 
@@ -300,10 +268,7 @@
                     </div>
 
 
-                    <div
-                        id="paymentDetails"
-                        class="payment-details"
-                    ></div>
+                    <div id="paymentDetails" class="payment-details"></div>
 
 
                     <div class="payment-amount-box">
@@ -353,16 +318,9 @@
                     </div>
 
 
-                    <label
-                        class="receipt-drop"
-                        for="paymentReceiptInput"
-                    >
+                    <label class="receipt-drop" for="paymentReceiptInput">
 
-                        <input
-                            id="paymentReceiptInput"
-                            type="file"
-                            accept="image/jpeg,image/png,image/webp"
-                        >
+                        <input id="paymentReceiptInput" type="file" accept="image/jpeg,image/png,image/webp">
 
                         <span class="receipt-drop-icon">
                             ↑
@@ -379,19 +337,10 @@
                     </label>
 
 
-                    <div
-                        id="receiptPreview"
-                        class="receipt-preview"
-                        hidden
-                    ></div>
+                    <div id="receiptPreview" class="receipt-preview" hidden></div>
 
 
-                    <button
-                        id="submitReceiptBtn"
-                        class="payment-submit-btn"
-                        type="button"
-                        disabled
-                    >
+                    <button id="submitReceiptBtn" class="payment-submit-btn" type="button" disabled>
                         ارسال رسید و تکمیل پرداخت
 
                         <span>
@@ -401,10 +350,7 @@
                     </button>
 
 
-                    <p
-                        id="paymentStatus"
-                        class="payment-status info"
-                    >
+                    <p id="paymentStatus" class="payment-status info">
                         بعد از واریز، رسید را بارگذاری کنید.
                     </p>
 
@@ -473,10 +419,7 @@
                     </div>
 
 
-                    <a
-                        href="/orders"
-                        class="payment-text-link"
-                    >
+                    <a href="/orders" class="payment-text-link">
                         مشاهده سفارش در حساب کاربری ←
                     </a>
 
@@ -571,19 +514,11 @@
                     FOLLOW
                 </h4>
 
-                <a
-                    href="https://instagram.com/nicherzz"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
+                <a href="https://instagram.com/nicherzz" target="_blank" rel="noopener noreferrer">
                     Instagram
                 </a>
 
-                <a
-                    href="https://t.me/nicherz"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
+                <a href="https://t.me/nicherz" target="_blank" rel="noopener noreferrer">
                     Telegram
                 </a>
 
@@ -611,15 +546,9 @@
          SCRIPTS
     ================================================== -->
 
-    <script
-        type="module"
-        src="payment.js"
-    ></script>
+    <script type="module" src="payment.js"></script>
 
-    <script
-        type="module"
-        src="header-auth.js"
-    ></script>
+    <script type="module" src="header-auth.js"></script>
 
 </body>
 
