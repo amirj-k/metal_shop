@@ -519,9 +519,7 @@ body.bands-page::after {
     gap:
         0.3em 1.35em;
     flex-direction: row;
-    width:
-        400px
-    ;}
+}
 
 .header-nav > a {
     position:
@@ -744,8 +742,6 @@ body.bands-page::after {
         all
         0.22s
         ease;
-    position: fixed;
-    right: 50px;
 }
 
 .cart-pill:hover {
@@ -1682,9 +1678,7 @@ body.bands-page .shop-footer {
     gap:
         1em;
 }
-.footer-info{
-    color: blue;
-}
+
 
 .footer-logo {
     width:
@@ -1938,7 +1932,6 @@ body.bands-page .shop-footer {
 }
 
 .input:focus {
-  border: 2px solid red;
   background-color: #0e0e10;
 }
 

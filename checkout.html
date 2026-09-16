@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="manual-payment.css">
     <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
     <link rel="icon" type="image/jpeg" href="./Images/logo.webp">
+    <link rel="stylesheet" href="ui-ux-overrides.css">
+
 </head>
 
 <body>
@@ -24,9 +26,8 @@
                 <div class="brand-mark"><img src="./Images/logo.webp" alt="NICHERZ logo" class="footer-logo"></div>
                 <div class="brand-copy"><span class="brand-name">NICHERZ</span><small>ARCHIVE</small></div>
             </div>
-            <nav class="header-nav" aria-label="Main navigation"><a href="/">HOME</a><a
-                    href="/shop">SHOP</a><a href="/#gallery">GALLERY</a><a
-                    href="/account">ACCOUNT</a><a href="/login">LOGIN</a></nav>
+            <nav class="header-nav" aria-label="Main navigation"><a href="/">HOME</a><a href="/shop">SHOP</a><a
+                    href="/#gallery">GALLERY</a><a href="/account">ACCOUNT</a><a href="/login">LOGIN</a></nav>
             <div class="header-actions"><a href="/cart" class="cart-pill">CART <span
                         id="checkoutCartCount">(0)</span></a></div>
         </div>
@@ -59,21 +60,14 @@
                         <div class="checkout-field"><label for="shippingPhone">PHONE NUMBER</label><input
                                 id="shippingPhone" name="shippingPhone" type="tel" autocomplete="tel" maxlength="30"
                                 placeholder="09xxxxxxxxx" required><small>شماره تماس برای هماهنگی ارسال</small></div>
-                                <div class="checkout-field">
-    <label for="shippingCity">CITY</label>
+                        <div class="checkout-field">
+                            <label for="shippingCity">CITY</label>
 
-    <input
-        id="shippingCity"
-        name="shippingCity"
-        type="text"
-        autocomplete="address-level2"
-        maxlength="100"
-        placeholder="مثلاً تهران"
-        required
-    >
+                            <input id="shippingCity" name="shippingCity" type="text" autocomplete="address-level2"
+                                maxlength="100" placeholder="مثلاً تهران" required>
 
-    <small>شهری که سفارش به آن ارسال می‌شود</small>
-</div>
+                            <small>شهری که سفارش به آن ارسال می‌شود</small>
+                        </div>
                         <div class="checkout-field"><label for="shippingAddress">SHIPPING ADDRESS</label><textarea
                                 id="shippingAddress" name="shippingAddress" autocomplete="street-address"
                                 maxlength="500" rows="5" placeholder="آدرس کامل خود را وارد کنید"

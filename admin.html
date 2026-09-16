@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="admin-payment.css">
     <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
     <link rel="icon" type="image/jpeg" href="./Images/logo.webp">
+    <link rel="stylesheet" href="ui-ux-overrides.css">
+
 </head>
 
 <body>
@@ -32,8 +34,8 @@
                     <div class="brand-mark"><img src="./Images/logo.webp" alt="NICHERZ logo" class="footer-logo"></div>
                     <div class="brand-copy"><span class="brand-name">NICHERZ</span><small>ADMIN</small></div>
                 </div>
-                <nav class="header-nav"><a href="/">HOME</a><a href="/shop">SHOP</a><a
-                        href="/orders">ORDERS</a><a href="/account">ACCOUNT</a></nav>
+                <nav class="header-nav"><a href="/">HOME</a><a href="/shop">SHOP</a><a href="/orders">ORDERS</a><a
+                        href="/account">ACCOUNT</a></nav>
                 <div class="header-actions"><button id="adminLogoutBtn" type="button"
                         class="admin-header-button">LOGOUT</button></div>
             </div>
@@ -130,7 +132,7 @@
                 <section class="admin-detail-section admin-status-section">
                     <div class="admin-detail-title">UPDATE STATUS</div>
                     <div class="admin-detail-group"><label for="adminStatusSelect">STATUS</label><select
-                            id="adminStatusSelect">
+                            id="adminStatusSelect" class="update-status-button">
                             <option value="pending">PENDING</option>
                             <option value="confirmed">CONFIRMED</option>
                             <option value="processing">PROCESSING</option>
@@ -138,6 +140,7 @@
                             <option value="delivered">DELIVERED</option>
                             <option value="cancelled">CANCELLED</option>
                         </select></div>
+                    <button type="button" id="updateStatusBtn" class="update-status-button">UPDATE STATUS</button>
                     <div id="adminSuccessModal" class="admin-modal" hidden>
                         <div class="admin-modal-backdrop" data-close-success></div>
                         <div class="admin-modal-box"><button id="closeAdminSuccessModal" type="button"
