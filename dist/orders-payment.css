@@ -1,0 +1,42 @@
+.orders-pay-button {
+    min-height: 2.6em;
+    padding: 0 1em;
+    margin-top: 0.5em;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 0.45em;
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    font-family: "Metal Mania", cursive;
+    font-size: 0.62em;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.orders-pay-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    color: #000;
+    background: #fff;
+    border-color: #fff;
+}
+
+.orders-pay-button:disabled {
+    opacity: 0.55;
+    cursor: wait;
+}
+
+.order-card-action {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+@media (max-width: 600px) {
+    .order-card-action {
+        align-items: stretch;
+    }
+
+    .orders-view-button,
+    .orders-pay-button {
+        width: 100%;
+    }
+}

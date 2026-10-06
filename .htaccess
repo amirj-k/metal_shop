@@ -1,27 +1,92 @@
 RewriteEngine On
 
 # =========================================================
-# Redirect old .html URLs to clean URLs
+# NOTE: `npm run build:products` injects per-product redirect
+# and rewrite rules directly below this line. Do not remove
+# the `RewriteEngine On` line; the builder depends on it.
 # =========================================================
 
-RewriteRule ^index-shop\.html$ /shop [R=301,L]
-RewriteRule ^cart\.html$ /cart [R=301,L]
-RewriteRule ^checkout\.html$ /checkout [R=301,L]
-RewriteRule ^payment\.html$ /payment [R=301,L]
-RewriteRule ^orders\.html$ /orders [R=301,L]
-RewriteRule ^account\.html$ /account [R=301,L]
-RewriteRule ^login\.html$ /login [R=301,L]
-RewriteRule ^register\.html$ /register [R=301,L]
-RewriteRule ^contact\.html$ /contact [R=301,L]
-RewriteRule ^admin\.html$ /admin [R=301,L]
-RewriteRule ^product-detail\.html$ /product [R=301,L]
 
-# Password recovery pages
-RewriteRule ^recovery\.html$ /recovery [R=301,L]
-RewriteRule ^reset-password\.html$ /reset-password [R=301,L]
+# =========================================================
+# Canonical host: https://nicherz.ir (non-www)
+# =========================================================
 
-# Homepage
-RewriteRule ^index\.html$ / [R=301,L]
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^www\.nicherz\.ir$ [NC]
+RewriteRule ^ https://nicherz.ir%{REQUEST_URI} [R=301,L]
+
+
+# =========================================================
+# Redirect old .html URLs to clean URLs
+# (guarded with THE_REQUEST so internal rewrites don't loop)
+# =========================================================
+
+RewriteCond %{THE_REQUEST} \s/index-shop\.html[\s?] [NC]
+RewriteRule ^ /shop [R=301,L]
+RewriteCond %{THE_REQUEST} \s/cart\.html[\s?] [NC]
+RewriteRule ^ /cart [R=301,L]
+RewriteCond %{THE_REQUEST} \s/checkout\.html[\s?] [NC]
+RewriteRule ^ /checkout [R=301,L]
+RewriteCond %{THE_REQUEST} \s/payment\.html[\s?] [NC]
+RewriteRule ^ /payment [R=301,L]
+RewriteCond %{THE_REQUEST} \s/orders\.html[\s?] [NC]
+RewriteRule ^ /orders [R=301,L]
+RewriteCond %{THE_REQUEST} \s/account\.html[\s?] [NC]
+RewriteRule ^ /account [R=301,L]
+RewriteCond %{THE_REQUEST} \s/login\.html[\s?] [NC]
+RewriteRule ^ /login [R=301,L]
+RewriteCond %{THE_REQUEST} \s/register\.html[\s?] [NC]
+RewriteRule ^ /register [R=301,L]
+RewriteCond %{THE_REQUEST} \s/contact\.html[\s?] [NC]
+RewriteRule ^ /contact [R=301,L]
+RewriteCond %{THE_REQUEST} \s/admin\.html[\s?] [NC]
+RewriteRule ^ /admin [R=301,L]
+RewriteCond %{THE_REQUEST} \s/product-detail\.html[\s?] [NC]
+RewriteRule ^ /product [R=301,L]
+RewriteCond %{THE_REQUEST} \s/recovery\.html[\s?] [NC]
+RewriteRule ^ /recovery [R=301,L]
+RewriteCond %{THE_REQUEST} \s/reset-password\.html[\s?] [NC]
+RewriteRule ^ /reset-password [R=301,L]
+RewriteCond %{THE_REQUEST} \s/index\.html[\s?] [NC]
+RewriteRule ^ / [R=301,L]
+RewriteCond %{THE_REQUEST} \s/home[\s?] [NC]
+RewriteRule ^ / [R=301,L]
+
+
+# =========================================================
+# Product routes
+# These must run BEFORE the real-file/directory short-circuit,
+# because /product is a real directory once products are built.
+# (Generated per-slug rules were injected above this line.)
+# =========================================================
+
+# Never serve raw generated snapshots (hashed filenames) directly.
+RewriteRule ^product/[0-9a-f]{64}\.html$ - [R=404,L]
+
+# Legacy query form: /product?id=123 -> /product/id-123 (then to slug)
+RewriteCond %{QUERY_STRING} (?:^|&)id=([1-9][0-9]*)(?:&|$) [NC]
+RewriteRule ^product(?:-detail)?(?:\.html)?/?$ /product/id-%1 [R=301,L,QSD]
+
+# Legacy id path -> JS fallback page (which redirects to the slug)
+RewriteRule ^product/id-[1-9][0-9]*/?$ product-detail.html [L]
+
+# Bare product route -> JS fallback page
+RewriteRule ^product(?:-detail)?(?:\.html)?/?$ product-detail.html [L]
+
+# Any product slug without a generated page is a real 404,
+# so retired or stale snapshots can never be served.
+RewriteRule ^product/([^/]+)/?$ - [R=404,L]
+
+
+# =========================================================
+# Block access to sensitive files
+# =========================================================
+
+<FilesMatch "\.(sql|sql\.gz|env|ini|log|bak|old)$">
+  Require all denied
+</FilesMatch>
+
+Options -Indexes
 
 
 # =========================================================
@@ -52,8 +117,27 @@ RewriteRule ^register/?$ register.html [L]
 RewriteRule ^contact/?$ contact.html [L]
 RewriteRule ^admin/?$ admin.html [L]
 
-RewriteRule ^product/?$ product-detail.html [L,QSA]
-
 # Password recovery
 RewriteRule ^recovery/?$ recovery.html [L]
 RewriteRule ^reset-password/?$ reset-password.html [L]
+
+
+# =========================================================
+# Error documents
+# =========================================================
+
+ErrorDocument 404 /404.html
+
+
+# =========================================================
+# Cache control
+# HTML/CSS/JS must always revalidate so new deploys appear
+# without a hard reload (unchanged files still get a 304).
+# Images, fonts and other assets keep normal caching.
+# =========================================================
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|htm|css|js|mjs)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+</IfModule>

@@ -1,0 +1,162 @@
+/* =========================================================
+   ADMIN — CUSTOM ORDERS
+   ========================================================= */
+
+#customOrdersCard {
+    position: relative;
+}
+
+.admin-custom-item-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8em;
+    margin-top: 0.35em;
+    color: rgba(255, 255, 255, 0.38);
+    font-family: Arial, sans-serif;
+    font-size: 0.56em;
+}
+
+.admin-custom-item-meta .admin-custom-type {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.admin-custom-item-meta .admin-custom-price {
+    color: rgba(255, 255, 255, 0.7);
+    direction: rtl;
+}
+
+.admin-custom-has-image {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3em;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Status variants for custom order statuses */
+
+.admin-status.approved {
+    border-color: rgba(140, 255, 180, 0.5);
+    color: #b8ffd6;
+}
+
+.admin-status.rejected {
+    border-color: rgba(255, 120, 120, 0.45);
+    color: #ffb3b3;
+}
+
+.admin-status.completed {
+    border-color: rgba(255, 255, 255, 0.55);
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+}
+
+/* Detail modal extras */
+
+.admin-custom-note {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 5.5em;
+    padding: 0.75em 0.9em;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0.5em;
+    background: #111;
+    color: #fff;
+    font: 0.85em/1.8 Tahoma, Arial, sans-serif;
+    direction: rtl;
+    resize: vertical;
+}
+
+.admin-custom-note:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.65);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.14);
+}
+
+.admin-custom-image-area {
+    min-height: 6em;
+}
+
+.admin-custom-no-image {
+    color: rgba(255, 255, 255, 0.35);
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 0.75em;
+    direction: rtl;
+}
+
+.admin-custom-image-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.7em;
+}
+
+.admin-custom-image-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.admin-custom-image-save {
+    padding: 0.5em 1em;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 0.45em;
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 0.68em;
+    direction: rtl;
+    cursor: pointer;
+}
+
+.admin-custom-image-save:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.admin-custom-image-save:disabled {
+    opacity: 0.55;
+    cursor: default;
+}
+
+.admin-custom-image-frame img {
+    display: block;
+    max-width: min(22em, 100%);
+    max-height: 26em;
+    object-fit: contain;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 0.6em;
+    background: #0c0c0c;
+}
+
+.admin-custom-image-link {
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 0.62em;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+}
+
+.admin-custom-image-link:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.admin-custom-image-loading {
+    color: rgba(255, 255, 255, 0.4);
+    font-family: Arial, sans-serif;
+    font-size: 0.7em;
+}
+
+/* Toolbar search (reuse admin-search styles from admin.css) */
+
+#customOrdersLoadState {
+    padding: 0.4em 1.5em 0.8em;
+    margin: 0;
+}
+
+@media (max-width: 40em) {
+    .admin-custom-item-meta {
+        flex-direction: column;
+        gap: 0.3em;
+    }
+}

@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "build:products": "node scripts/build-products.mjs",
+    "check:js": "node -e \"const fs=require('fs');const files=fs.readdirSync('.').filter(f=>f.endsWith('.js'));const {execFileSync}=require('child_process');let bad=0;for(const f of files){try{execFileSync(process.execPath,['--check',f],{stdio:'pipe'})}catch(e){bad++;console.error('FAIL',f)}}console.log(bad?bad+' file(s) failed':'All JS files parse OK');process.exit(bad?1:0)\""
+  },
   "devDependencies": {
     "supabase": "^2.117.0"
   },

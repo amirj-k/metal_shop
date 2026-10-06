@@ -1,0 +1,504 @@
+RewriteEngine On
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*6(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/metallica-kill-em-all [R=301,L,NE,QSD]
+RewriteRule ^product/id-6(?:\.html)?/?$ https://nicherz.ir/product/metallica-kill-em-all [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*38(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/grace [R=301,L,NE,QSD]
+RewriteRule ^product/id-38(?:\.html)?/?$ https://nicherz.ir/product/grace [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*39(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/dookie-green-day [R=301,L,NE,QSD]
+RewriteRule ^product/id-39(?:\.html)?/?$ https://nicherz.ir/product/dookie-green-day [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*40(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/sketches-for-my-sweetheart-the-drunk-jeff-buckley [R=301,L,NE,QSD]
+RewriteRule ^product/id-40(?:\.html)?/?$ https://nicherz.ir/product/sketches-for-my-sweetheart-the-drunk-jeff-buckley [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*42(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/greatest-hits-queen [R=301,L,NE,QSD]
+RewriteRule ^product/id-42(?:\.html)?/?$ https://nicherz.ir/product/greatest-hits-queen [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*43(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/in-utero-nirvana [R=301,L,NE,QSD]
+RewriteRule ^product/id-43(?:\.html)?/?$ https://nicherz.ir/product/in-utero-nirvana [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*44(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/ok-camputer-radiohead [R=301,L,NE,QSD]
+RewriteRule ^product/id-44(?:\.html)?/?$ https://nicherz.ir/product/ok-camputer-radiohead [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*45(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/three-cheers-for-sweet-revenge-my-chemical-romance [R=301,L,NE,QSD]
+RewriteRule ^product/id-45(?:\.html)?/?$ https://nicherz.ir/product/three-cheers-for-sweet-revenge-my-chemical-romance [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*60(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/father-of-all-mother-fuckers-green-day [R=301,L,NE,QSD]
+RewriteRule ^product/id-60(?:\.html)?/?$ https://nicherz.ir/product/father-of-all-mother-fuckers-green-day [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*61(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/back-in-black-acdc [R=301,L,NE,QSD]
+RewriteRule ^product/id-61(?:\.html)?/?$ https://nicherz.ir/product/back-in-black-acdc [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*62(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/appetite-for-festruction-guns-n-roses [R=301,L,NE,QSD]
+RewriteRule ^product/id-62(?:\.html)?/?$ https://nicherz.ir/product/appetite-for-festruction-guns-n-roses [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*63(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/black-breaker-acdc [R=301,L,NE,QSD]
+RewriteRule ^product/id-63(?:\.html)?/?$ https://nicherz.ir/product/black-breaker-acdc [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*64(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/pranoid-black-sabbath [R=301,L,NE,QSD]
+RewriteRule ^product/id-64(?:\.html)?/?$ https://nicherz.ir/product/pranoid-black-sabbath [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*65(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/killers-iron-maiden [R=301,L,NE,QSD]
+RewriteRule ^product/id-65(?:\.html)?/?$ https://nicherz.ir/product/killers-iron-maiden [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*66(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/the-number-of-the-beast-iron-maiden [R=301,L,NE,QSD]
+RewriteRule ^product/id-66(?:\.html)?/?$ https://nicherz.ir/product/the-number-of-the-beast-iron-maiden [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*67(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/cowboys-from-hell-pantera [R=301,L,NE,QSD]
+RewriteRule ^product/id-67(?:\.html)?/?$ https://nicherz.ir/product/cowboys-from-hell-pantera [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*77(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/pantera [R=301,L,NE,QSD]
+RewriteRule ^product/id-77(?:\.html)?/?$ https://nicherz.ir/product/pantera [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*80(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/o [R=301,L,NE,QSD]
+RewriteRule ^product/id-80(?:\.html)?/?$ https://nicherz.ir/product/o [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*81(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/the-great-sothern-trendkill [R=301,L,NE,QSD]
+RewriteRule ^product/id-81(?:\.html)?/?$ https://nicherz.ir/product/the-great-sothern-trendkill [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*82(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/st-anger-metallica [R=301,L,NE,QSD]
+RewriteRule ^product/id-82(?:\.html)?/?$ https://nicherz.ir/product/st-anger-metallica [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*83(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/ride-the-lightening-metallica [R=301,L,NE,QSD]
+RewriteRule ^product/id-83(?:\.html)?/?$ https://nicherz.ir/product/ride-the-lightening-metallica [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*84(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/the-dark-side-of-the-moon-pink-floyd [R=301,L,NE,QSD]
+RewriteRule ^product/id-84(?:\.html)?/?$ https://nicherz.ir/product/the-dark-side-of-the-moon-pink-floyd [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*85(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/the-wall-pink-floyd [R=301,L,NE,QSD]
+RewriteRule ^product/id-85(?:\.html)?/?$ https://nicherz.ir/product/the-wall-pink-floyd [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*86(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/the-book-of-soul-iron-maidn [R=301,L,NE,QSD]
+RewriteRule ^product/id-86(?:\.html)?/?$ https://nicherz.ir/product/the-book-of-soul-iron-maidn [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*87(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/some-where-in-time-iron-maidn [R=301,L,NE,QSD]
+RewriteRule ^product/id-87(?:\.html)?/?$ https://nicherz.ir/product/some-where-in-time-iron-maidn [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*94(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/fear-of-the-dark-iron-maidn [R=301,L,NE,QSD]
+RewriteRule ^product/id-94(?:\.html)?/?$ https://nicherz.ir/product/fear-of-the-dark-iron-maidn [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*95(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/sjukdom-lifelover [R=301,L,NE,QSD]
+RewriteRule ^product/id-95(?:\.html)?/?$ https://nicherz.ir/product/sjukdom-lifelover [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*96(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/erotik-lifelover [R=301,L,NE,QSD]
+RewriteRule ^product/id-96(?:\.html)?/?$ https://nicherz.ir/product/erotik-lifelover [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*97(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/pulver-lifelover [R=301,L,NE,QSD]
+RewriteRule ^product/id-97(?:\.html)?/?$ https://nicherz.ir/product/pulver-lifelover [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*98(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/slayer-diabolus-in-musica [R=301,L,NE,QSD]
+RewriteRule ^product/id-98(?:\.html)?/?$ https://nicherz.ir/product/slayer-diabolus-in-musica [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*99(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/black-sabbath-born-agian [R=301,L,NE,QSD]
+RewriteRule ^product/id-99(?:\.html)?/?$ https://nicherz.ir/product/black-sabbath-born-agian [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*100(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/avenged-sevenfold-nightmare [R=301,L,NE,QSD]
+RewriteRule ^product/id-100(?:\.html)?/?$ https://nicherz.ir/product/avenged-sevenfold-nightmare [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*101(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/avenged-svenfold-hail-to-the-king [R=301,L,NE,QSD]
+RewriteRule ^product/id-101(?:\.html)?/?$ https://nicherz.ir/product/avenged-svenfold-hail-to-the-king [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*102(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/slipknot-lowa [R=301,L,NE,QSD]
+RewriteRule ^product/id-102(?:\.html)?/?$ https://nicherz.ir/product/slipknot-lowa [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*103(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/slipknot-90-live [R=301,L,NE,QSD]
+RewriteRule ^product/id-103(?:\.html)?/?$ https://nicherz.ir/product/slipknot-90-live [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*104(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/slipknot-all-hopes-is-gone [R=301,L,NE,QSD]
+RewriteRule ^product/id-104(?:\.html)?/?$ https://nicherz.ir/product/slipknot-all-hopes-is-gone [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*105(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/slipknot-the-gray-chapter [R=301,L,NE,QSD]
+RewriteRule ^product/id-105(?:\.html)?/?$ https://nicherz.ir/product/slipknot-the-gray-chapter [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*106(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/korn-isues [R=301,L,NE,QSD]
+RewriteRule ^product/id-106(?:\.html)?/?$ https://nicherz.ir/product/korn-isues [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*107(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/deftones-minerva [R=301,L,NE,QSD]
+RewriteRule ^product/id-107(?:\.html)?/?$ https://nicherz.ir/product/deftones-minerva [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*108(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/judus-priest-living-after-midnight [R=301,L,NE,QSD]
+RewriteRule ^product/id-108(?:\.html)?/?$ https://nicherz.ir/product/judus-priest-living-after-midnight [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*109(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/linkin-park-me-teora [R=301,L,NE,QSD]
+RewriteRule ^product/id-109(?:\.html)?/?$ https://nicherz.ir/product/linkin-park-me-teora [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*110(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/linkin-park-hybrid-theory [R=301,L,NE,QSD]
+RewriteRule ^product/id-110(?:\.html)?/?$ https://nicherz.ir/product/linkin-park-hybrid-theory [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*111(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/alice-in-chains-dirt [R=301,L,NE,QSD]
+RewriteRule ^product/id-111(?:\.html)?/?$ https://nicherz.ir/product/alice-in-chains-dirt [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*112(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/radiohead-in-rainbows [R=301,L,NE,QSD]
+RewriteRule ^product/id-112(?:\.html)?/?$ https://nicherz.ir/product/radiohead-in-rainbows [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*113(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/korn-follow-the-leader [R=301,L,NE,QSD]
+RewriteRule ^product/id-113(?:\.html)?/?$ https://nicherz.ir/product/korn-follow-the-leader [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*114(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/alice-in-chains-jar-of-flies [R=301,L,NE,QSD]
+RewriteRule ^product/id-114(?:\.html)?/?$ https://nicherz.ir/product/alice-in-chains-jar-of-flies [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*115(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/system-of-a-down-toxicity [R=301,L,NE,QSD]
+RewriteRule ^product/id-115(?:\.html)?/?$ https://nicherz.ir/product/system-of-a-down-toxicity [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*116(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/soundgarden-louder-than-love [R=301,L,NE,QSD]
+RewriteRule ^product/id-116(?:\.html)?/?$ https://nicherz.ir/product/soundgarden-louder-than-love [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*117(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/soundgarden-superunknown [R=301,L,NE,QSD]
+RewriteRule ^product/id-117(?:\.html)?/?$ https://nicherz.ir/product/soundgarden-superunknown [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*118(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/soundgarden-badmotorfinger [R=301,L,NE,QSD]
+RewriteRule ^product/id-118(?:\.html)?/?$ https://nicherz.ir/product/soundgarden-badmotorfinger [R=301,L,NE,QSD]
+RewriteCond %{QUERY_STRING} (?:^|&)id=0*119(?:&|$) [NC]
+RewriteRule ^(?:product(?:-detail)?(?:\.html)?)/?$ https://nicherz.ir/product/deathmetal-panchiko [R=301,L,NE,QSD]
+RewriteRule ^product/id-119(?:\.html)?/?$ https://nicherz.ir/product/deathmetal-panchiko [R=301,L,NE,QSD]
+RewriteRule ^product/music(?:\.html)?/?$ https://nicherz.ir/product/metallica-kill-em-all [R=301,L,NE,QSD]
+RewriteRule ^product/dirt-alice-in-chain(?:\.html)?/?$ - [R=404,L]
+RewriteRule ^product/back-sabbath-born-agian(?:\.html)?/?$ https://nicherz.ir/product/black-sabbath-born-agian [R=301,L,NE,QSD]
+RewriteRule ^product/metallica-kill-em-all/$ https://nicherz.ir/product/metallica-kill-em-all [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/metallica-kill-em-all$ product/42fde45ce3631591dee47be8274bc4cd061db4fde6a23f70fad1eff7892a4023.html [END]
+RewriteRule ^product/grace/$ https://nicherz.ir/product/grace [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/grace$ product/e010fd1ce1acc173e3b4835b7635f8d4600d774869102adb5cb7b5d7895649ba.html [END]
+RewriteRule ^product/dookie-green-day/$ https://nicherz.ir/product/dookie-green-day [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/dookie-green-day$ product/cb14ee5f7fd90d22a8cf18fecebc54a1dffc97ddcd2ab26f2385158d998d02df.html [END]
+RewriteRule ^product/sketches-for-my-sweetheart-the-drunk-jeff-buckley/$ https://nicherz.ir/product/sketches-for-my-sweetheart-the-drunk-jeff-buckley [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/sketches-for-my-sweetheart-the-drunk-jeff-buckley$ product/56faa47f50a7e3cd463ded816c877728d21d1df1311cee8b83f79cb59868737f.html [END]
+RewriteRule ^product/greatest-hits-queen/$ https://nicherz.ir/product/greatest-hits-queen [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/greatest-hits-queen$ product/4db11ccacb806ebaa661c7391145f42510dfac0e225d9129893dd06f357df472.html [END]
+RewriteRule ^product/in-utero-nirvana/$ https://nicherz.ir/product/in-utero-nirvana [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/in-utero-nirvana$ product/0d5d5d6a1830c3c253d1bb9c0cc31080117536a9f74023a3389e02f3d9d49077.html [END]
+RewriteRule ^product/ok-camputer-radiohead/$ https://nicherz.ir/product/ok-camputer-radiohead [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/ok-camputer-radiohead$ product/bc17173928db0a83f55f2bfe8a9667e1136cfa0308371894694202a6d63e3491.html [END]
+RewriteRule ^product/three-cheers-for-sweet-revenge-my-chemical-romance/$ https://nicherz.ir/product/three-cheers-for-sweet-revenge-my-chemical-romance [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/three-cheers-for-sweet-revenge-my-chemical-romance$ product/8faa0c5530a48622b2de2dd517a007ec2144c3422c81ae0c76426055a5689731.html [END]
+RewriteRule ^product/father-of-all-mother-fuckers-green-day/$ https://nicherz.ir/product/father-of-all-mother-fuckers-green-day [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/father-of-all-mother-fuckers-green-day$ product/a8c41c91e31b28c5946b98b135853664f53a0fda881c00dacc315fd24ace75f7.html [END]
+RewriteRule ^product/back-in-black-acdc/$ https://nicherz.ir/product/back-in-black-acdc [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/back-in-black-acdc$ product/cae83e037363dba36400d384771c31ec8952250fbbaae1c645ecdfff91870098.html [END]
+RewriteRule ^product/appetite-for-festruction-guns-n-roses/$ https://nicherz.ir/product/appetite-for-festruction-guns-n-roses [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/appetite-for-festruction-guns-n-roses$ product/cc483794f7fe38640f7a310a97a5401f3c2e588812f5b2dc234d0e6bb7af46e8.html [END]
+RewriteRule ^product/black-breaker-acdc/$ https://nicherz.ir/product/black-breaker-acdc [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/black-breaker-acdc$ product/38ab5dd3228a03df8818226a2bd74a80de58ae0e1ec9e2422b1d308c78b3a1b5.html [END]
+RewriteRule ^product/pranoid-black-sabbath/$ https://nicherz.ir/product/pranoid-black-sabbath [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/pranoid-black-sabbath$ product/694640ec00117d0c188e93a9f58eb9cfa9d59c780cb8c35deb1df4ee68e8f2d2.html [END]
+RewriteRule ^product/killers-iron-maiden/$ https://nicherz.ir/product/killers-iron-maiden [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/killers-iron-maiden$ product/7719860135768ad728cc108a9217cacbe3ad1e480b5c4a198036a64e39d8ac78.html [END]
+RewriteRule ^product/the-number-of-the-beast-iron-maiden/$ https://nicherz.ir/product/the-number-of-the-beast-iron-maiden [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/the-number-of-the-beast-iron-maiden$ product/393c225207911f9c6db0bdcb2bd70649bd2ac4732dfac224304863cdb99bdb10.html [END]
+RewriteRule ^product/cowboys-from-hell-pantera/$ https://nicherz.ir/product/cowboys-from-hell-pantera [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/cowboys-from-hell-pantera$ product/5a0be305b232f21cb3276676a5db1c068ba5ba8bcdecdcbb38472fb08195f0fc.html [END]
+RewriteRule ^product/pantera/$ https://nicherz.ir/product/pantera [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/pantera$ product/8cc131a56ea5986fdf7dae19cba8e0c57991f5ae6d8c226bea1c9b5f32f77cf3.html [END]
+RewriteRule ^product/o/$ https://nicherz.ir/product/o [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/o$ product/65c74c15a686187bb6bbf9958f494fc6b80068034a659a9ad44991b08c58f2d2.html [END]
+RewriteRule ^product/the-great-sothern-trendkill/$ https://nicherz.ir/product/the-great-sothern-trendkill [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/the-great-sothern-trendkill$ product/cfcb3ee7d95f62e5c765149a81e503d2a43f6b5d8d7b637d016fd75f63b30748.html [END]
+RewriteRule ^product/st-anger-metallica/$ https://nicherz.ir/product/st-anger-metallica [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/st-anger-metallica$ product/1b1ec0e8aa8c74ae4752b26af7259c1badea2e50449de9d2b7162d97481e8a8d.html [END]
+RewriteRule ^product/ride-the-lightening-metallica/$ https://nicherz.ir/product/ride-the-lightening-metallica [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/ride-the-lightening-metallica$ product/69e7eef5aff378207b43214072dd63fcba516818d9180ed82b2872a7d32e0939.html [END]
+RewriteRule ^product/the-dark-side-of-the-moon-pink-floyd/$ https://nicherz.ir/product/the-dark-side-of-the-moon-pink-floyd [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/the-dark-side-of-the-moon-pink-floyd$ product/61aa4f3230f4acf20b1f8a9e3dc55a17fef95719750937a19cc5ed9db083bb4a.html [END]
+RewriteRule ^product/the-wall-pink-floyd/$ https://nicherz.ir/product/the-wall-pink-floyd [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/the-wall-pink-floyd$ product/74a779425ee930b51b6bf3fa7f9e8cd1f03452b8ffb1347b7057864becae3480.html [END]
+RewriteRule ^product/the-book-of-soul-iron-maidn/$ https://nicherz.ir/product/the-book-of-soul-iron-maidn [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/the-book-of-soul-iron-maidn$ product/f2c27e8c48cf61feb6f26920fd04e611a2e73402fa6fb2dc0ff2397008d48b5b.html [END]
+RewriteRule ^product/some-where-in-time-iron-maidn/$ https://nicherz.ir/product/some-where-in-time-iron-maidn [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/some-where-in-time-iron-maidn$ product/959926b89e46ad2fc4455e4c6b6a54001f8eb7198824094605fa57455051afd9.html [END]
+RewriteRule ^product/fear-of-the-dark-iron-maidn/$ https://nicherz.ir/product/fear-of-the-dark-iron-maidn [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/fear-of-the-dark-iron-maidn$ product/6c5392d2a8d7d2e3edd504a99b2a5c757e52434bdeca5c091a12e281f7ee9038.html [END]
+RewriteRule ^product/sjukdom-lifelover/$ https://nicherz.ir/product/sjukdom-lifelover [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/sjukdom-lifelover$ product/b3944cdc21282c7f99e725093fd67431351fc3f5d8df36c5eee248d2c79e2c4b.html [END]
+RewriteRule ^product/erotik-lifelover/$ https://nicherz.ir/product/erotik-lifelover [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/erotik-lifelover$ product/f8ad763658219c63fc87d0cd73258345051b776a0fc24cb78ccba2f43e19386b.html [END]
+RewriteRule ^product/pulver-lifelover/$ https://nicherz.ir/product/pulver-lifelover [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/pulver-lifelover$ product/be8873fc6483c64221af4002001e5c095c8c8155bc7952c556094849a9e44279.html [END]
+RewriteRule ^product/slayer-diabolus-in-musica/$ https://nicherz.ir/product/slayer-diabolus-in-musica [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/slayer-diabolus-in-musica$ product/b2b914ee7b82ed674586faa72c2b92edd9441a3d936f9a7ae665b280c1182090.html [END]
+RewriteRule ^product/black-sabbath-born-agian/$ https://nicherz.ir/product/black-sabbath-born-agian [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/black-sabbath-born-agian$ product/1e52c1657df3d5c7aae85b3faeec2cce1b35c14aa3093d1ec6304e9b54f7a090.html [END]
+RewriteRule ^product/avenged-sevenfold-nightmare/$ https://nicherz.ir/product/avenged-sevenfold-nightmare [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/avenged-sevenfold-nightmare$ product/4c68798d01b2340a5c34d788eaf65c68493257c468997d1424efd98690d54606.html [END]
+RewriteRule ^product/avenged-svenfold-hail-to-the-king/$ https://nicherz.ir/product/avenged-svenfold-hail-to-the-king [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/avenged-svenfold-hail-to-the-king$ product/5842eec88ce7f54013896eee22b0ae1a86e7521d434408a394dda19ac94dea75.html [END]
+RewriteRule ^product/slipknot-lowa/$ https://nicherz.ir/product/slipknot-lowa [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/slipknot-lowa$ product/515167223cd88c89f595093b259c36daff1bb8241d56dd16e4dffefa50477fcc.html [END]
+RewriteRule ^product/slipknot-90-live/$ https://nicherz.ir/product/slipknot-90-live [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/slipknot-90-live$ product/7c4c14048e4b69abb31f63b439b28a2c4304db07827b18b3518fa9d2a63eedba.html [END]
+RewriteRule ^product/slipknot-all-hopes-is-gone/$ https://nicherz.ir/product/slipknot-all-hopes-is-gone [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/slipknot-all-hopes-is-gone$ product/465107b1b9ea9733fb0d2bff906ac21886b9d80a21d093cb44af174352253194.html [END]
+RewriteRule ^product/slipknot-the-gray-chapter/$ https://nicherz.ir/product/slipknot-the-gray-chapter [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/slipknot-the-gray-chapter$ product/160196a9f9935a5f8b934489941e917df0d0d1d7eaea4228da490852d54e97be.html [END]
+RewriteRule ^product/korn-isues/$ https://nicherz.ir/product/korn-isues [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/korn-isues$ product/a83276018f7e03ce31e2846d8f80d95a1b5e8bef77a1b91a2f69d54691bf69ec.html [END]
+RewriteRule ^product/deftones-minerva/$ https://nicherz.ir/product/deftones-minerva [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/deftones-minerva$ product/9c8a5e4688c958de58bf9d708a63d4374263bfd00480492e2ddaa59471cedb5e.html [END]
+RewriteRule ^product/judus-priest-living-after-midnight/$ https://nicherz.ir/product/judus-priest-living-after-midnight [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/judus-priest-living-after-midnight$ product/c0da5ce3fa8fb95031c42aa20c17cb3d3249e79c4199183850625fbaa1a6474d.html [END]
+RewriteRule ^product/linkin-park-me-teora/$ https://nicherz.ir/product/linkin-park-me-teora [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/linkin-park-me-teora$ product/4a05d767a2054bb88320677bdde14ab57a99ae6c60d745ca16f8eebbc68c873b.html [END]
+RewriteRule ^product/linkin-park-hybrid-theory/$ https://nicherz.ir/product/linkin-park-hybrid-theory [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/linkin-park-hybrid-theory$ product/df29089a311d1371a51bb8003435fd0250bad223b8347b3cd19b9fc2d61398b2.html [END]
+RewriteRule ^product/alice-in-chains-dirt/$ https://nicherz.ir/product/alice-in-chains-dirt [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/alice-in-chains-dirt$ product/007a6e8861d6a712f17866c45cead160a7270af20da20c83825bc34391d54164.html [END]
+RewriteRule ^product/radiohead-in-rainbows/$ https://nicherz.ir/product/radiohead-in-rainbows [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/radiohead-in-rainbows$ product/2ae17d8de0ccd284c5cad7b669628bdf0d65392e157472f00dd206e35efd8be9.html [END]
+RewriteRule ^product/korn-follow-the-leader/$ https://nicherz.ir/product/korn-follow-the-leader [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/korn-follow-the-leader$ product/2c27ff0633e1346be32a18345d0ed38cda1a8ffd04bb36a1607dad27de1e3c00.html [END]
+RewriteRule ^product/alice-in-chains-jar-of-flies/$ https://nicherz.ir/product/alice-in-chains-jar-of-flies [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/alice-in-chains-jar-of-flies$ product/91814f227593a2f68d45ccccc31d31f47239ae7d6572747816338457b80d8875.html [END]
+RewriteRule ^product/system-of-a-down-toxicity/$ https://nicherz.ir/product/system-of-a-down-toxicity [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/system-of-a-down-toxicity$ product/07c30d22ab0c05de54b13b4116d527129489519da5d03e73b0e65c80a112aba9.html [END]
+RewriteRule ^product/soundgarden-louder-than-love/$ https://nicherz.ir/product/soundgarden-louder-than-love [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/soundgarden-louder-than-love$ product/aca3cbc9ff35883de5ca95a715e79102117c89481b90d3a25e8bb1529ae8937b.html [END]
+RewriteRule ^product/soundgarden-superunknown/$ https://nicherz.ir/product/soundgarden-superunknown [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/soundgarden-superunknown$ product/77c295138b2b81f571db4d07b371e40e690491147fcad18bf57c2f4f1be30b74.html [END]
+RewriteRule ^product/soundgarden-badmotorfinger/$ https://nicherz.ir/product/soundgarden-badmotorfinger [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/soundgarden-badmotorfinger$ product/1ac3230023295ecde4fe830b782e47e1a6f0c70a06efd0bcc88373c80f147952.html [END]
+RewriteRule ^product/deathmetal-panchiko/$ https://nicherz.ir/product/deathmetal-panchiko [R=301,L,NE]
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^nicherz\.ir$ [NC]
+RewriteRule ^product/deathmetal-panchiko$ product/a8be69a6aefa54e1fc98eafc94860798a5bfefbe9a60768963ee68150a731e7b.html [END]
+
+
+# =========================================================
+# NOTE: `npm run build:products` injects per-product redirect
+# and rewrite rules directly below this line. Do not remove
+# the `RewriteEngine On` line; the builder depends on it.
+# =========================================================
+
+
+# =========================================================
+# Canonical host: https://nicherz.ir (non-www)
+# =========================================================
+
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^www\.nicherz\.ir$ [NC]
+RewriteRule ^ https://nicherz.ir%{REQUEST_URI} [R=301,L]
+
+
+# =========================================================
+# Redirect old .html URLs to clean URLs
+# (guarded with THE_REQUEST so internal rewrites don't loop)
+# =========================================================
+
+RewriteCond %{THE_REQUEST} \s/index-shop\.html[\s?] [NC]
+RewriteRule ^ /shop [R=301,L]
+RewriteCond %{THE_REQUEST} \s/cart\.html[\s?] [NC]
+RewriteRule ^ /cart [R=301,L]
+RewriteCond %{THE_REQUEST} \s/checkout\.html[\s?] [NC]
+RewriteRule ^ /checkout [R=301,L]
+RewriteCond %{THE_REQUEST} \s/payment\.html[\s?] [NC]
+RewriteRule ^ /payment [R=301,L]
+RewriteCond %{THE_REQUEST} \s/orders\.html[\s?] [NC]
+RewriteRule ^ /orders [R=301,L]
+RewriteCond %{THE_REQUEST} \s/account\.html[\s?] [NC]
+RewriteRule ^ /account [R=301,L]
+RewriteCond %{THE_REQUEST} \s/login\.html[\s?] [NC]
+RewriteRule ^ /login [R=301,L]
+RewriteCond %{THE_REQUEST} \s/register\.html[\s?] [NC]
+RewriteRule ^ /register [R=301,L]
+RewriteCond %{THE_REQUEST} \s/contact\.html[\s?] [NC]
+RewriteRule ^ /contact [R=301,L]
+RewriteCond %{THE_REQUEST} \s/admin\.html[\s?] [NC]
+RewriteRule ^ /admin [R=301,L]
+RewriteCond %{THE_REQUEST} \s/product-detail\.html[\s?] [NC]
+RewriteRule ^ /product [R=301,L]
+RewriteCond %{THE_REQUEST} \s/recovery\.html[\s?] [NC]
+RewriteRule ^ /recovery [R=301,L]
+RewriteCond %{THE_REQUEST} \s/reset-password\.html[\s?] [NC]
+RewriteRule ^ /reset-password [R=301,L]
+RewriteCond %{THE_REQUEST} \s/index\.html[\s?] [NC]
+RewriteRule ^ / [R=301,L]
+RewriteCond %{THE_REQUEST} \s/home[\s?] [NC]
+RewriteRule ^ / [R=301,L]
+
+
+# =========================================================
+# Product routes
+# These must run BEFORE the real-file/directory short-circuit,
+# because /product is a real directory once products are built.
+# (Generated per-slug rules were injected above this line.)
+# =========================================================
+
+# Never serve raw generated snapshots (hashed filenames) directly.
+RewriteRule ^product/[0-9a-f]{64}\.html$ - [R=404,L]
+
+# Legacy query form: /product?id=123 -> /product/id-123 (then to slug)
+RewriteCond %{QUERY_STRING} (?:^|&)id=([1-9][0-9]*)(?:&|$) [NC]
+RewriteRule ^product(?:-detail)?(?:\.html)?/?$ /product/id-%1 [R=301,L,QSD]
+
+# Legacy id path -> JS fallback page (which redirects to the slug)
+RewriteRule ^product/id-[1-9][0-9]*/?$ product-detail.html [L]
+
+# Bare product route -> JS fallback page
+RewriteRule ^product(?:-detail)?(?:\.html)?/?$ product-detail.html [L]
+
+# Any product slug without a generated page is a real 404,
+# so retired or stale snapshots can never be served.
+RewriteRule ^product/([^/]+)/?$ - [R=404,L]
+
+
+# =========================================================
+# Block access to sensitive files
+# =========================================================
+
+<FilesMatch "\.(sql|sql\.gz|env|ini|log|bak|old)$">
+  Require all denied
+</FilesMatch>
+
+Options -Indexes
+
+
+# =========================================================
+# Never rewrite real files or directories
+# =========================================================
+
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+
+# =========================================================
+# Clean public routes
+# =========================================================
+
+RewriteRule ^$ index.html [L]
+RewriteRule ^home/?$ index.html [L]
+
+RewriteRule ^shop/?$ index-shop.html [L,QSA]
+RewriteRule ^cart/?$ cart.html [L]
+RewriteRule ^checkout/?$ checkout.html [L]
+RewriteRule ^payment/?$ payment.html [L]
+RewriteRule ^orders/?$ orders.html [L]
+RewriteRule ^account/?$ account.html [L]
+
+RewriteRule ^login/?$ login.html [L]
+RewriteRule ^register/?$ register.html [L]
+RewriteRule ^contact/?$ contact.html [L]
+RewriteRule ^admin/?$ admin.html [L]
+
+# Password recovery
+RewriteRule ^recovery/?$ recovery.html [L]
+RewriteRule ^reset-password/?$ reset-password.html [L]
+
+
+# =========================================================
+# Error documents
+# =========================================================
+
+ErrorDocument 404 /404.html
+
+
+# =========================================================
+# Cache control
+# HTML/CSS/JS must always revalidate so new deploys appear
+# without a hard reload (unchanged files still get a 304).
+# Images, fonts and other assets keep normal caching.
+# =========================================================
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|htm|css|js|mjs)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+</IfModule>

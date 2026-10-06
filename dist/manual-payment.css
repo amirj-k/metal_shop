@@ -1,0 +1,233 @@
+/* =========================================================
+   NICHERZ — MANUAL CARD PAYMENT
+   ========================================================= */
+
+.manual-payment-card {
+    position: relative;
+    z-index: 1;
+    margin: 0 1.5em 1.5em;
+    padding: 1.35em;
+    border: 1px solid rgba(255, 255, 255, .14);
+    border-radius: 1em;
+    background:
+        linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.018));
+    box-shadow:
+        0 14px 32px rgba(0,0,0,.34),
+        inset 0 1px 0 rgba(255,255,255,.055);
+}
+
+.manual-payment-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: linear-gradient(135deg, rgba(255,255,255,.06), transparent 38%);
+}
+
+.manual-payment-card h3,
+.manual-payment-card p,
+.manual-payment-card > div,
+.manual-payment-card > label,
+.manual-payment-card > input,
+.manual-payment-card > button {
+    position: relative;
+    z-index: 1;
+}
+
+.manual-payment-card h3 {
+    margin: 0;
+    color: #fff;
+    font-family: "Metal Mania", cursive;
+    font-size: 1.15em;
+    font-weight: normal;
+    letter-spacing: .08em;
+}
+
+.manual-payment-card > p:first-of-type {
+    max-width: 52em;
+    margin: .65em 0 1.2em;
+    color: rgba(255,255,255,.48);
+    font-family: Arial, sans-serif;
+    font-size: .66em;
+    line-height: 1.8;
+}
+
+.manual-payment-details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .7em;
+    margin-top: 1em;
+}
+
+.manual-payment-row {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+    padding: .85em .95em;
+    border: 1px solid rgba(255,255,255,.09);
+    border-radius: .7em;
+    background: rgba(0,0,0,.28);
+}
+
+.manual-payment-row span:first-child {
+    flex-shrink: 0;
+    color: rgba(255,255,255,.35);
+    font-size: .58em;
+    letter-spacing: .1em;
+}
+
+.manual-payment-row strong {
+    min-width: 0;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: .7em;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: right;
+    direction: ltr;
+    overflow-wrap: anywhere;
+}
+
+.manual-payment-amount {
+    margin: 1em 0 0 !important;
+    padding: .8em .95em;
+    border: 1px solid rgba(255,255,255,.11);
+    border-radius: .7em;
+    background: rgba(255,255,255,.035);
+    color: #fff !important;
+    font-family: Arial, sans-serif;
+    font-size: .72em !important;
+    font-weight: 700;
+}
+
+.manual-payment-upload {
+    margin-top: 1.1em;
+    padding-top: 1.1em;
+    border-top: 1px solid rgba(255,255,255,.075);
+}
+
+.manual-payment-upload label {
+    display: block;
+    margin-bottom: .55em;
+    color: rgba(255,255,255,.68);
+    font-size: .62em;
+    letter-spacing: .08em;
+}
+
+.manual-payment-upload input[type="file"] {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 3.25em;
+    padding: .65em .75em;
+    border: 1px dashed rgba(255,255,255,.2);
+    border-radius: .7em;
+    background: rgba(0,0,0,.22);
+    color: rgba(255,255,255,.62);
+    font-family: Arial, sans-serif;
+    font-size: .64em;
+    cursor: pointer;
+}
+
+.manual-payment-upload input[type="file"]::file-selector-button {
+    margin-right: .7em;
+    padding: .55em .8em;
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: .5em;
+    background: rgba(255,255,255,.06);
+    color: #fff;
+    font: inherit;
+    cursor: pointer;
+}
+
+.manual-payment-upload input[type="file"]:hover {
+    border-color: rgba(255,255,255,.35);
+}
+
+.manual-payment-submit {
+    width: 100%;
+    min-height: 3.35em;
+    margin-top: .8em;
+    padding: 0 1em;
+    border: 1px solid rgba(255,255,255,.28);
+    border-radius: .7em;
+    background: linear-gradient(135deg, #fff, #d8d8d8);
+    color: #000;
+    font-family: "Metal Mania", cursive;
+    font-size: .76em;
+    letter-spacing: .1em;
+    cursor: pointer;
+    transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+}
+
+.manual-payment-submit:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 0 24px rgba(255,255,255,.16);
+    filter: brightness(1.04);
+}
+
+.manual-payment-submit:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.manual-payment-submit:disabled {
+    opacity: .42;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.manual-payment-status {
+    min-height: 1.6em;
+    margin: .75em 0 0 !important;
+    padding: .6em .75em;
+    border-radius: .55em;
+    font-family: Arial, sans-serif;
+    font-size: .6em !important;
+    line-height: 1.6;
+}
+
+.manual-payment-status.info {
+    border: 1px solid rgba(255,255,255,.08);
+    background: rgba(255,255,255,.025);
+    color: rgba(255,255,255,.48) !important;
+}
+
+.manual-payment-status.success {
+    border: 1px solid rgba(140,255,170,.16);
+    background: rgba(100,255,140,.045);
+    color: #a7ffbd !important;
+}
+
+.manual-payment-status.error {
+    border: 1px solid rgba(255,110,110,.17);
+    background: rgba(255,90,90,.045);
+    color: #ff9d9d !important;
+}
+
+.manual-payment-card > p:last-of-type {
+    margin-bottom: 0;
+}
+
+@media (max-width: 760px) {
+    .manual-payment-card {
+        margin: 0 1em 1em;
+        padding: 1.1em;
+    }
+
+    .manual-payment-details {
+        grid-template-columns: 1fr;
+    }
+
+    .manual-payment-row {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: .35em;
+    }
+
+    .manual-payment-row strong {
+        text-align: left;
+    }
+}
